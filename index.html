@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ninico</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/style.css">echo "# easy-shop" >> README.md
+    
+</head>
+<body>
+  <!-- data-bs-theme="light" -->
+  <div class="form-check form-switch mx-4">
+    <input
+      class="form-check-input p-2"
+      type="checkbox"
+      role="switch"
+      checked
+      id="flexSwitchCheckChecked"
+      onclick="setDarkMode()"
+    />
+  </div>
+        <header class="container-xxl shadow">
+          <div class="nav-top ">
+              <nav class="navbars-top row">
+                   <div class="col-2">
+                    <a href="#" class="nav-branding" style="color: var(--primary-color);">Ninico</a>
+                   
+                   </div>
+                    
+                    <!-- <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search here" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <button class="btn btn-sm text-white" id="button-addon2" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: #6655ff;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                      
+                    </div>    -->
+                    <div class="col-8 p-0 d-flex justify-content-between align-items-center rounded-1" style="background-color: #f3f4f7;">
+                    <div class="select-cont">
+                      <select class="select-box px-2 px-md-4 py-2" name="categories" id="" style="background-color: #f3f4f7;">
+                        <option value="">All Categories</option>
+                        <option value="0">Sunglasses</option>
+                        <option value="1">Bags & Purses</option>
+                        <option value="2">Silk Accessories</option>
+                        <option value="3">Cosmetics</option>
+                        <option value="4">Handy Cream</option>
+                        <option value="5">Plastics Gift</option>
+                        <option value="6">Gift Sets</option>
+                      </select>
+                    </div>
+                      <input class="border-0 py-2 px-4 w-100" type="text" name="name" for="button-addon2" placeholder="I' am searching for" ria-label="I' am searching for" aria-describedby="button-addon2"style="background-color: #f3f4f7;">
+                      <button class="btn text-white rounded-0 rounded-end-1 py-2" id="button-addon2" type="submit"style="background-color: var(--primary-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
+                      <!-- <button class="btn btn-sm text-white" id="search-field" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #6655ff;"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                    </div>
+
+                    <div class="col-2 nav-top-right">
+                      <ul class="d-flex justify-content-end align-content-center list-unstyled mb-0">
+                        <li class=""><a href="#"><i class="fa-solid fa-cart-plus fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                        <div class="divider">|</div>
+                        <li><a href="#"><i class="fa-regular fa-heart fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                        <div class="divide">|</div>
+                        <li class="me-1"><a href="#"><i class="fa-regular fa-user fs-5 position-relative"><span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                      </ul>
+                    </div>              
+                  
+                </nav>
+              </div>
+
+            <div class="nav-bottom"  > 
+                <nav class="navbars-bottom" >
+                  
+                  <div class="d-flex justify-content-center align-items-center">
+            
+                    <button class="btn fw-semibold" style="background-color: var(--primary-color);color:#fff;"><i class="fa-solid fa-bars me-2"></i>All Categories</button>
+                   
+                  </div>
+                    <ul class="nav-menus mb-0 ps-0">
+                      <li class="nav-items">
+                        <a href="#" class="nav-links ">Home<i class="fa-solid fa-angle-down"></i></a>
+                      </li>
+                      <li class="nav-items">
+                        <a href="#" class="nav-links ">Shop<i class="fa-solid fa-angle-down"></i></a>
+                      </li>
+                      <li class="nav-items">
+                        <a href="#" class="nav-links ">Pages<i class="fa-solid fa-angle-down"></i></a>
+                      </li>
+                      <li class="nav-items">
+                        <a href="#" class="nav-links ">About Me<i class="fa-solid fa-angle-down"></i></a>
+                      </li>
+                      <li class="nav-items">
+                        <a href="#" class="nav-links ">Blog<i class="fa-solid fa-angle-down"></i></a>
+                      </li>
+                      <li class="nav-items">
+                        <a href="#" class="nav-links ">Contact Me<i class="fa-solid fa-angle-down"></i></a>
+                      </li>
+                    
+                    </ul>
+              
+      
+                  <div class="d-flex ">
+                    <div class="social-links me-3 me-lg-0 d-flex justify-content-center align-items-center">
+                      <!-- <li class="d-none d-sm-block"><a href="#"><img src="../frontend/images/social-icon/facebook.png" alt=""></a></li>
+                        <li  class="d-none d-sm-block"><a href="#"><img src="../frontend/images/social-icon/whatsapp.png" alt=""></a></li>
+                        <li  class="d-none d-sm-block"><a href="#"><img src="../frontend/images/social-icon/linkedin.png" alt=""></a></li>
+                        <li  class="d-none d-sm-block"><a href="#"><img src="../frontend/images/social-icon/youtube.png" alt=""></a></li> -->
+                        <!--  <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li> -->
+                      <button class="btn btn-sm text-white" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: #6655ff;"><i class="fa-solid fa-magnifying-glass"></i></button> 
+                     
+                      
+                    </div>
+                    <div class="hamburger">
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                    </div>
+                  </div>
+                </nav>
+            </div>
+      
+                <!--search modal start here  -->
+      
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <!-- <h5 class="modal-title">Modal title</h5> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-4">
+                    <form>
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Search</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+      
+                    </form>
+                        <div class="container-sm px-4 px-sm-5 ">
+                          <a  href="#" class="card mb-3" style="max-width: 100%; ">
+                            <div class="d-flex flex-column flex-md-row justify-content-center align-content-center">
+                              <div class="search-card-image">
+                                <img src="../frontend/images/slide1.jpg" class="object-fit-cover" alt="">
+                              </div>
+                              <div class="search-dec p-3">
+                              <h4>This is a wider card with </h4>
+                              <p class="mb-0">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#" class=" card mb-3" style=" ">
+                          <div class="d-flex flex-column flex-md-row justify-content-center align-content-center">
+                            <div class="search-card-image">
+                              <img src="../frontend/images/slide2.jpg" class="bject-fit-cover" alt="">
+                            </div>
+                            <div class="search-dec p-3">
+                            <h4>This is a wider card with </h4>
+                            <p class="mb-0">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="#" class=" card mb-3" style="max-width: 100%; ">
+                        <div class="d-flex flex-column flex-md-row justify-content-center align-content-center">
+                          <div class="search-card-image">
+                            <img src="../frontend/images/slide1.jpg" class="bject-fit-cover" alt="">
+                          </div>
+                            <div class="search-dec p-3">
+                            <h4>This is a wider card with </h4>
+                            <p class="mb-0">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                      </a>
+                        </div>
+                        
+                  </div>
+                  <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btn-sm">Submit</button>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+              <!--search modal end here  -->
+
+        </header>
+
+       
+            <h1 style="color: #edf2fc;">hello</h1>
+            <h1 style="color: #212121;">hello</h1>
+            <h1 style="color: #000106;">hello</h1>
+            <h1 style="color: #fff;">hello <span class="text-dark">white</span></h1>
+
+        <script>
+          // function myFunction() {
+          //   var element = document.body;
+          //   element.dataset.bsTheme =
+          //     element.dataset.bsTheme == "light" ? "dark" : "light";
+          // }
+         
+        </script>
+        <script>
+          if(localStorage.getItem('theme') == 'dark'){
+            setDarkMode();
+            if(document.getElementById('flexSwitchCheckChecked').checked){
+              localStorage.setItem('flexSwitchCheckChecked', true)
+            }
+          }
+
+          function setDarkMode(){
+            let isDark = document.body.classList.toggle('darkmode');
+
+            if(isDark){
+              setDarkMode.checked - true;
+              localStorage.setItem('theme', 'dark');
+              document.getElementById('flexSwitchCheckChecked').setAttribute('checked', 'checked');
+
+            } else{
+              setDarkMode.checked - true;
+              localStorage.removeItem('theme', 'dark');
+            }
+          }
+        </script>
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/nav.js"></script>
+
+</body>
+</html>
