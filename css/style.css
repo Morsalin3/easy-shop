@@ -81,7 +81,6 @@
 
 
   /*------nav bottom start here-------*/
- 
   .nav-menus li{
     list-style: none;
   }
@@ -148,6 +147,45 @@
     transition: all 0.3s ease;
     background-color: gray;
   }
+  .categories .cate-menu{
+    position: absolute;
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 0 20px 45px #00000020;
+    margin-top: 50px;
+    border-radius: 5px;
+    opacity: 0;
+    /* display: none; */
+    z-index: -999;
+    transition: all ease 0.5s;
+    color: #000000;
+  }
+  .categories .bbb:hover {
+    z-index: 999;
+    opacity: 1;
+    /* display: block; */
+    margin-top: 0;
+  }
+
+  .navbars-bottom ul .submenu{
+    position: absolute;
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 0 20px 45px #00000020;
+    margin-top: 30px;
+    border-radius: 5px;
+    opacity: 0;
+    /* display: none; */
+    z-index: -999;
+    transition: all ease 0.5s;
+  }
+  .navbars-bottom ul li:hover .submenu{
+    z-index: 99;
+    opacity: 1;
+    /* display: block; */
+    margin-top: 0;
+  }
+
   .social-links li{
     list-style: none;
     margin-right: 10px;
