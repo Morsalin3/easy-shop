@@ -29,6 +29,11 @@
 
  }
 
+ .products-header{
+  color: var(--primary-color);
+  font-weight: 400;
+ }
+
   /*---------- nav top start here-----------*/
   .navbars-top{
     min-height: 70px;
@@ -253,7 +258,51 @@
     height: 200px;
    }
    /*-------------- slider end here------------ */
+   /*---------- categories section start here------- */
+   .category-box{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #dddddd52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .category-box span{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    top: 0;
+    right: 5%;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.06);
+    transition: all ease-out 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+   }
 
+   .category-box:hover span{
+    background-color: var(--primary-color);
+    color: #ffffff;
+   }
+   
+   .category-title{
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #000000;
+    /* border-bottom-width: 0; */
+    transition: all ease 0.3s;
+   }
+   /* .category-title:hover{
+    border-width: 100%;
+   } */
+   /*------- categories section end here-----------  */
    /*---------- footer start here ---------------- */
    
 .footer{
@@ -309,6 +358,9 @@
    /*-------------- footer end here-----------------  */
   
  /* media queries start here  */
+ @media screen and (min-width:250px) and (max-width: 300px){
+
+ }
  @media screen and (max-width:576px){
     /*--------- navbar start here--------- */
     /* .hamburger{
@@ -423,7 +475,7 @@
     }
    }
   .carousel-item img{
-    height: 250px;
+    height: 300px;
    }
   .banner-right{
     display: flex;
