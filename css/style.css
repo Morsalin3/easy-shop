@@ -316,6 +316,23 @@
     border-width: 100%;
    } */
    /*------- categories section end here-----------  */
+
+
+   /* -----------popular products start here -------- */
+    .popular-product-box{
+      width: 100%;
+      height: 216px;
+    }
+    .popular-product-box img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .product-icon-box{
+      position: absolute;;
+    }
+   /* -----------popular products end here -------- */
+
    /*---------- footer start here ---------------- */
    
 .footer{
