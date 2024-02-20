@@ -120,7 +120,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
   }
   
   .navbars-bottom ul li a{
@@ -252,11 +252,13 @@
    .slider-button:hover{
     background-color: var(--primary-color);
     color: #ffffff;
-   }
+  }
+
    .banner-top img, .banner-bottom img{
     height: 200px;
    }
    /*-------------- slider end here------------ */
+
    /*---------- categories section start here------- */
    .category-box{
     position: relative;
@@ -369,7 +371,7 @@
       box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
     }
 
-    .popular-product-cont p:last-child{
+    .popular-product-cont .product-title:last-child{
       color: var(--primary-color);
       font-weight: 500;
       margin-top: 5px;
@@ -377,6 +379,7 @@
     .popular-product-cont .product-title{
       margin-top: 8px;
       margin-bottom: 0;
+      font-size: 14px;
     }
 
     .product-btn{
@@ -387,9 +390,53 @@
     .product-btn:hover{
       color: var(--primary-color);
     }
-   /* -----------popular products end here -------- */
+/* -----------popular products end here -------- */
 
-   /*---------- footer start here ---------------- */
+/* ---------subcription section start here ------- */
+    .newsletter-cont{
+      background-image: url(/images/newsletter.jpg);
+      background-position:center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .newsletter-input input[type=text] {
+      width: 100%;
+      box-sizing: border-box;
+      outline: none;
+      background:#f3f4f7;
+      font-size: 14px;
+    }
+
+    .newsletter-input input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus{
+      border: none;
+      -webkit-box-shadow: 0 0 0px 100px #f3f4f7 inset;
+     }
+
+     .newsletter-input{
+      position: relative;
+     }
+     .newsletter-input .button-box{
+      position: absolute;
+      right: 1%;
+      top: 50%;
+      transform: translateY(-50%);
+     }
+     
+     .newsletter-input .subscribe-btn {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      font-size: 14px;
+     }
+     .newsletter-input button i{
+      font-size: 14px;
+      margin-left: 4px;
+     }
+ 
+
+/* ---------subcription section end here --------- */
+
+/*---------- footer start here ---------------- */
    
 .footer{
   background-color:#F8F8F8
@@ -444,9 +491,9 @@
    /*-------------- footer end here-----------------  */
   
  /* media queries start here  */
- /* @media screen and (min-width:250px) and (max-width: 300px){
+ @media screen and (min-width:250px) and (max-width: 300px){
 
- } */
+ }
  @media screen and (max-width:576px){
     /*--------- navbar start here--------- */
     /* .hamburger{
@@ -464,9 +511,9 @@
    } */
 
 /*------ navbar bottom start here ---------- */
-.navbars-bottom{
-  min-height: 0px;
-}
+  .navbars-bottom{
+    min-height: 0px;
+  }
 
    .nav-container {
     position: absolute;
@@ -475,7 +522,6 @@
     top: 0;
     gap: 0;
     transition: 0.5s;
-    /* border: 1px solid rgba(128, 128, 128, 0.459); */
     z-index: 9999;
     display: block;
    }
@@ -530,7 +576,7 @@
     /* padding-left: 20px; */
     /* width: 100%; */
   }
-   .navbars-bottom ul li:hover .submenu{
+   .navbars-bottom ul li:focus .submenu{
     position: relative;
     margin-top: 0;
   }
@@ -592,52 +638,82 @@
  }
 
  @media screen and (min-width:576px) and (max-width: 768px){
-  /* navbar start here  */
-  .hamburger{
-    display: block;
-  }
+  /*--------- navbar start here--------- */
 
-  .hamburger.active .bar:nth-child(2){
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
-  }
+/*------ navbar bottom start here ---------- */
+.navbars-bottom{
+  min-height: 0px;
+}
 
-  .nav-menus{
-    position: absolute;
-    left: 0;
-    top: -300%;
-    gap: 0;
-    flex-direction: column;
-    background-color: palevioletred;
-    width: 100%;
-    text-align: center;
-    transition: 0.5s;
-    padding-bottom: 20px;
-    z-index: 9999;
-  }
+ .nav-container {
+  position: absolute;
+  left: -100%;
+  width: 60%;
+  top: 0;
+  gap: 0;
+  transition: 0.5s;
+  z-index: 9999;
+  display: block;
+ }
+ .nav-burger{
+  cursor: pointer;
+ }
 
-  .nav-items{
-    margin-top: 20px;
-  }
-  .navbars-bottom ul li a:hover{
-    color: var(--primary-color)
-  }
-  .navbars-bottom ul li a{
-    color: #fff;
-  }
-  .nav-menus.active{
-    top: 70px;
-  }
+ .remove{
+  display: block;
+  position: absolute;
+  z-index: 9999;
+
+ }
+ .nav-menus{
+   gap: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: start;
+   background-color: var(--text-primary-color);
+   padding-bottom: 25px;
+   margin-top: 35px;
+   z-index: 9999;
+ }
+ .nav-container.active{
+  left: 0;
+}
+ .nav-items{
+   margin-top: 10px;
+   margin-left: 20px;
+ }
+
+ .navbars-bottom ul li a{
+  color: #fff;
+}
+
+ .navbars-bottom ul li a:hover{
+   color: var(--primary-color)
+ }
+ .navbars-bottom ul li ul li a::before{
+  content: "-";
+  padding: 0 5px;
+}
+
+ .navbars-bottom ul .submenu{
+  margin-top: -30px;
+  background-color: var(--text-primary-color);
+  /* padding-left: 20px; */
+  /* width: 100%; */
+}
+ .navbars-bottom ul li:hover .submenu{
+  position: relative;
+  margin-top: 0;
+} 
+
   .search-card-image{
     width: 100%;
     height: 200px;
     }
-    /* navbar end here  */
+
+    /*---------- navbar bottom end here ---------- */
+    /*---------- navbar end here  ------------*/
 
   /* banner/slider section start here  */
   
@@ -655,55 +731,83 @@
 
 
   @media screen and (min-width: 768px) and (max-width: 992px){
-  
-   /* navbar start here  */
-   .hamburger{
-     display: block;
-   }
- 
-   .hamburger.active .bar:nth-child(2){
-     opacity: 0;
-   }
-   .hamburger.active .bar:nth-child(1){
-     transform: translateY(8px) rotate(45deg);
-   }
-   .hamburger.active .bar:nth-child(3){
-     transform: translateY(-8px) rotate(-45deg);
-   }
+   /*--------- navbar start here--------- */
 
-   .nav-menus{
-     position: absolute;
-     left: 0;
-     top: -300%;
-     gap: 0;
-     flex-direction: column;
-     background-color: palevioletred;
-     width: 100%;
-     text-align: center;
-     transition: 0.5s;
-     padding-bottom: 20px;
-     z-index: 9999;
-   }
- 
-   .nav-items{
-     margin-top: 20px;
-   }
-   .navbars-bottom ul li a:hover{
-     color: var(--primary-color)
-   }
-   .navbars-bottom ul li a{
-     color: #fff;
-   }
-   .nav-menus.active{
-     top: 70px;
-   }
+/*------ navbar bottom start here ---------- */
+.navbars-bottom{
+  min-height: 0px;
+}
+
+ .nav-container {
+  position: absolute;
+  left: -100%;
+  width: 60%;
+  top: 0;
+  gap: 0;
+  transition: 0.5s;
+  z-index: 9999;
+  display: block;
+ }
+ .nav-burger{
+  cursor: pointer;
+ }
+
+ .remove{
+  display: block;
+  position: absolute;
+  z-index: 9999;
+
+ }
+ .nav-menus{
+   gap: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: start;
+   background-color: var(--text-primary-color);
+   padding-bottom: 25px;
+   margin-top: 35px;
+   z-index: 9999;
+ }
+ .nav-container.active{
+  left: 0;
+}
+ .nav-items{
+   margin-top: 10px;
+   margin-left: 20px;
+ }
+
+ .navbars-bottom ul li a{
+  color: #fff;
+}
+
+ .navbars-bottom ul li a:hover{
+   color: var(--primary-color)
+ }
+ .navbars-bottom ul li ul li a::before{
+  content: "-";
+  padding: 0 5px;
+}
+
+ .navbars-bottom ul .submenu{
+  margin-top: -30px;
+  background-color: var(--text-primary-color);
+  /* padding-left: 20px; */
+  /* width: 100%; */
+}
+ .navbars-bottom ul li:hover .submenu{
+  position: relative;
+  margin-top: 0;
+} 
+
    .search-card-image{
      width: 280px;
      height: 200px;
      }
-    /* navbar end here  */
+  /*-------- navbar bottom end here ---------- */
+  /*---------- navbar end here --------------- */
 
-   /* banner section start here  */
+   /*---- banner section start here ----------- */
   
   .banner-right{
     display: flex;
@@ -718,6 +822,10 @@
   /* banner section end here  */
    
  }
+
+ /* ------.newsletter-section start here ------ */
+
+ /*------- .newsletter-section end here -------- */
 
  @media screen and (min-width: 992px) and (max-width:1200px){
    /* .
