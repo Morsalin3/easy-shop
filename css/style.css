@@ -336,9 +336,12 @@
     }
     .popular-product-box{
       width: 100%;
-      height: 250px;
+      height: 300px;
       border-radius: 5px;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
     }
     .popular-product-box img{
@@ -346,6 +349,7 @@
       height: 100%;
       border-radius: 5px;
       transition: all 1.5s ease;
+
     }
 
     .popular-product-main:hover .popular-product-box img{
@@ -391,7 +395,69 @@
       color: var(--primary-color);
     }
 /* -----------popular products end here -------- */
+/* ---------offcanvas cart start here ----------- */
+.offcan-card-sec{
+  height: calc(100vh - 350px);
+  z-index: 1;
+  scrollbar-color: var(--primary-color) transparent;
+  scrollbar-width: thin;
 
+}
+
+.offc-card-right h5, h6 {
+ margin-bottom: 10px;
+ color: var(--text-primary-color);
+}
+.offc-card-right span{
+  bottom: 10%;
+  right: 8%;
+}
+.input-box{
+  width: 10vw;
+  background-color: #f4f4f4;
+  padding: 3px;
+}
+
+.input-box input[type=text]{
+  width: 30px;
+  outline: 0;
+  background-color: #f4f4f4;
+  font-size: 14px;
+}
+
+ .input-box button{
+    transition: all .3s ease-in-out;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0 !important;
+    background-color: #fff;
+    z-index: 0;
+    border-radius: 4px!important;
+    color: var(--primary-color);
+ }
+ .cart-footer{
+  background-color: #f4f4f4;
+ }
+ .cart-footer h6{
+  color: var(--text-primary-color);
+ }
+ .cart-footer h5{
+  color: var(--primary-color);
+ }
+ .cart-footer .view-btn {
+  border-color: var(--primary-color);
+  font-weight: 500;
+  color: var(--primary-color);
+ }
+ .cart-footer .view-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+ }
+/* ---------offcanvas cart end here ----------- */
 /* ---------subcription section start here ------- */
     .newsletter-cont{
       background-image: url(/images/newsletter.jpg);
@@ -521,7 +587,7 @@
     width: 60%;
     top: 0;
     gap: 0;
-    transition: 0.5s;
+    transition: all 0.5s ease;
     z-index: 9999;
     display: block;
    }
@@ -537,9 +603,9 @@
    }
    .nav-menus{
      gap: 0;
-     display: flex;
+     /* display: flex; */
      flex-direction: column;
-     justify-content: space-between;
+     /* justify-content: space-between; */
      align-items: start;
      background-color: var(--text-primary-color);
      padding-bottom: 25px;
@@ -576,7 +642,7 @@
     /* padding-left: 20px; */
     /* width: 100%; */
   }
-   .navbars-bottom ul li:focus .submenu{
+   .navbars-bottom ul li:hover .submenu{
     position: relative;
     margin-top: 0;
   }
@@ -628,13 +694,25 @@
   }
   /* banner/slider section end here  */
 
+   
+     /*---------- popular products start here -------- */
+.popular-product-box{
+ height: 400px;
+
+}
+/*---------- popular products end here -------- */
+
+/* ------------footer start here --------- */
+
    .footer-links{
-     margin-left: 43%;
+     /* margin-left: 43%; */
    }
    .footer-social{
      display: flex;
      justify-content: center;
    }
+   /* ------------footer end here --------- */
+
  }
 
  @media screen and (min-width:576px) and (max-width: 768px){
@@ -667,9 +745,9 @@
  }
  .nav-menus{
    gap: 0;
-   display: flex;
+   /* display: flex; */
    flex-direction: column;
-   justify-content: space-between;
+   /* justify-content: space-between; */
    align-items: start;
    background-color: var(--text-primary-color);
    padding-bottom: 25px;
@@ -727,6 +805,15 @@
     height: 214px;
   }
   /* banner/slider section end here  */
+
+  /*---------- popular products start here -------- */
+.popular-product-box{
+  height: 230px;
+
+}
+/*---------- popular products end here -------- */
+
+
 }
 
 
@@ -760,9 +847,9 @@
  }
  .nav-menus{
    gap: 0;
-   display: flex;
+   /* display: flex; */
    flex-direction: column;
-   justify-content: space-between;
+   /* justify-content: space-between; */
    align-items: start;
    background-color: var(--text-primary-color);
    padding-bottom: 25px;
@@ -828,20 +915,25 @@
  /*------- .newsletter-section end here -------- */
 
  @media screen and (min-width: 992px) and (max-width:1200px){
-   /* .
-   {
-     top:100%;
-     left: 25%;
-  
-    }
-    .video-prev{
-     top:100%;
-     left: 20%;
-    
-    } */
- 
+   
+   /*---------- popular products start here -------- */
+.popular-product-box{
+  height: 250px;
+
+}
+/*---------- popular products end here -------- */
+
  }
- @media screen and (max-width:1400px){
+
+ @media screen and (min-width: 1200px) and (max-width:1400px){
  
+     /*---------- popular products start here -------- */
+.popular-product-box{
+  height: 250px;
+
+}
+/*---------- popular products end here -------- */
+
+ }
  
  }
