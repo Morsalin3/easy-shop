@@ -198,15 +198,7 @@
     </header>
     <!---------- header end here  ---------->
 
-    <!---- cart page banner start here  ---->
-    <section class="container-xl gx-4 py-4">
-        <div class="cart-banner">
-            <a href="index.html">Home&nbsp;>&nbsp;<span>Shopping Cart</span>
-            </a>
-        </div>
-    </section>
-    <!----- cart page banner end here  ----->
-
+    
     <!-- offcanvas start here  -->
     <div class="offcanvas offcanvas-end d-none d-md-block" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header bg-danger-subtle">
@@ -347,13 +339,192 @@
     </div>
     <!-- offcanvas end here  -->
 
+    <!---- cart page banner start here  ---->
+    <section class="container-xl gx-4 py-4">
+        <div class="cart-banner">
+            <a href="index.html">Home&nbsp;>&nbsp;<span>Shopping Cart</span>
+            </a>
+        </div>
+    </section>
+    <!----- cart page banner end here  ----->
+
+ 
+    <!-- main cart table section start here  -->
+
+    <section class="container-xl gx-4 py-4">
+        <div class="table-responsive-lg">
+            <table class="table table-bordered table-light">
+                <thead>
+                  <tr>
+                    <th scope="col" class="align-middle">Product</th>
+                    <th scope="col" class="text-center align-middle">Uint Price</th>
+                    <th scope="col" class="text-center align-middle">Quantity</th>
+                    <th scope="col" class="text-center align-middle">Total Price</th>
+                    <th scope="col" class="text-center align-middle">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="">
+                    <tr>
+                        <td style="width: 500px;">
+                            <div class="cart-thumbnail">
+                                <div class="">
+                                <a href="#"><img src="images/product/product-3.jpg" class="" alt=""></a>
+                                </div>
+                                <div class="cart-tbl-desc ps-2">
+                                    <a href="#">Hobnobs The Nobbly Biscuit Biscuit Biscuit </a>
+                                    <p>(Color: Blue, Size: M)</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center align-middle">$23.25</td>
+                        <td class="text-center align-middle">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="input-box rounded d-flex justify-content-between align-items-center border">
+                                    <button class="offc-plus-btn  border-0 fw-bold">+</button>
+                                    <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
+                                    <button class="offc-minus-btn border-0 fw-bold">-</button>
+                                    </div>
+                            </div>
+                        </td>
+                        <td class="text-center align-middle">$226</td>
+                        <td class="text-center align-middle">
+                            <button class="btn fw-bold">x</button>
+                        </td>
+                    </tr>
+                  <tr>
+                    <td style="width: 500px;">
+                        <div class="cart-thumbnail">
+                            <div class="">
+                               <a href="#"><img src="images/product/product-1.jpg" class="" alt=""></a>
+                            </div>
+                            <div class="cart-tbl-desc ps-2">
+                                <a href="#">Hobnobs The Nobbly Biscuit</a>
+                                <p>(Color: Blue, Size: M)</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center align-middle">$153.2</td>
+                    <td class="text-center align-middle">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="input-box rounded d-flex justify-content-between align-items-center border">
+                                <button class="offc-plus-btn  border-0 fw-bold">+</button>
+                                <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
+                                <button class="offc-minus-btn border-0 fw-bold">-</button>
+                                </div>
+                        </div>
+                    </td>
+                    <td class="text-center align-middle">$226</td>
+                    <td class="text-center align-middle">
+                        <button class="btn fw-bold">x</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 500px;">
+                        <div class="cart-thumbnail">
+                            <div class="">
+                               <a href="#"><img src="images/product/product-2.jpg" class="" alt=""></a>
+                            </div>
+                            <div class="cart-tbl-desc ps-2">
+                                <a href="#">Hobnobs The Nobbly Biscuit</a>
+                                <p>(Color: Blue, Size: M)</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center align-middle">$153.2</td>
+                    <td class="text-center align-middle">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="input-box rounded d-flex justify-content-between align-items-center border">
+                                <button class="offc-plus-btn  border-0 fw-bold">+</button>
+                                <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
+                                <button class="offc-minus-btn border-0 fw-bold">-</button>
+                                </div>
+                        </div>
+                    </td>
+                    <td class="text-center align-middle">$226</td>
+                    <td class="text-center align-middle">
+                        <button class="btn fw-bold">x</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 500px;">
+                        <div class="cart-thumbnail">
+                            <div class="">
+                               <a href="#"><img src="images/product/product-5.jpg" class="" alt=""></a>
+                            </div>
+                            <div class="cart-tbl-desc ps-2">
+                                <a href="#">Hobnobs The Nobbly Biscuit</a>
+                                <p>(Color: Blue, Size: M)</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center align-middle">$15.22</td>
+                    <td class="text-center align-middle">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="input-box rounded d-flex justify-content-between align-items-center border">
+                                <button class="offc-plus-btn  border-0 fw-bold">+</button>
+                                <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
+                                <button class="offc-minus-btn border-0 fw-bold">-</button>
+                                </div>
+                        </div>
+                    </td>
+                    <td class="text-center align-middle">$200</td>
+                    <td class="text-center align-middle">
+                        <button class="btn fw-bold">x</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </section>
+
+    <!-- main cart table section end here  -->
+
+    <!-- cart amount sec start here  -->
+    <section class="container-xl gx-4 py-4">
+        <div class="row">
+            <div class="col-sm-6 mb-3">
+                <div class="row">
+                   <div class="col-sm-6 mb-3">
+                    <input type="email"  class="form-control  py-3 text-center" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Coupon Code">
+                   </div>
+                    <div class="col-sm-6">
+                        <button class="btn py-3 w-100" style="background-color: var(--primary-color); color: #fff;font-size: 14px;">Applay Coupon</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <h4 class="text-center">Cart Totals</h4>
+                <div class="table-responsive-lg">
+                    <table class="table border table-light">
+                       
+                        <tbody style="font-size: 14px;">
+                        <tr>
+                            <td class="text-start align-middle">Subtotal</td>
+                            <td class="text-end align-middle">$203</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start align-middle">Tax</td>
+                            <td class="text-end align-middle">$52</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start align-middle">Total</td>
+                            <td class="text-end align-middle">$255.32</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <button class="btn py-3 mt-3 text-white text-sm" style="background-color: var(--primary-color); font-size: 14px;">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>
+    <!-- cart amount sec end here  -->
 
     <!--------- footer start here ------------>
     <section class="footer mt-4 ">
         <div class="container-xl  ">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-4">
             <div class="col mb-4 mb-sm-0">
-              <a href="#" class="footer-branding text-center text-sm-start text-dark fw-semibold">EasyShop</a>
+              <a href="index.html" class="footer-branding text-center text-sm-start fw-semibold" style="color: var(--primary-color);">EasyShop</a>
               <p class="footer-desc">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> 
   
               <div>
@@ -419,7 +590,7 @@
           </div>
         </div>
         <div class="text-center border border-start-0  border-end-0" style="background-color: #DFE0E3;">
-          <p class="my-auto p-3">Copyright ©2023 All Rights Reserved by DEV.</p>
+          <p class="my-auto p-3">Copyright ©2023 All Rights Reserved by EasyShop.</p>
         </div>
       </section>
     <!------------ footer end here ----------->
