@@ -5,6 +5,7 @@
   --primary-color: #d51243;
   --text-primary-color: #222222;
   --text-secondary-color: #4a5568;
+  --background-color: #f4f4f4;
 
 }
 
@@ -29,10 +30,15 @@
 
  }
 
- .products-header{
+ .products-header-right{
   color: var(--primary-color);
   font-weight: 400;
+  border-bottom: 2px solid var(--primary-color);
  }
+ .products-header{
+  display: inline-block;
+ }
+
 
   /*---------- nav top start here-----------*/
   .navbars-top{
@@ -198,6 +204,7 @@
     padding: 8px 10px;
     z-index: -999;
     transition: all ease 0.5s;
+    border-top: 2px solid var(--primary-color);
   }
  
   .navbars-bottom ul li:hover .submenu{
@@ -259,7 +266,7 @@
    }
    /*-------------- slider end here------------ */
 
-   /*---------- categories section start here------- */
+   /*----------Top categories section start here------- */
    .category-box{
     position: relative;
     width: 130px;
@@ -317,7 +324,7 @@
    /* .category-title:hover{
     border-width: 100%;
    } */
-   /*------- categories section end here-----------  */
+   /*-------Top categories section end here-----------  */
 
 
    /* -----------popular products start here -------- */
@@ -395,6 +402,11 @@
       color: var(--primary-color);
     }
 /* -----------popular products end here -------- */
+/*-------- top rated products start here ------ */
+.top-rated-header{
+}
+
+/*-------- top rated products end here ------ */
 /* ---------offcanvas cart start here ----------- */
 .offcan-card-sec{
   height: calc(100vh - 350px);
@@ -505,7 +517,7 @@
 /*---------- footer start here ---------------- */
    
 .footer{
-  background-color:#F8F8F8
+  background-color:var(--background-color)
 }
 .footer-branding{
   font-size: 2rem;

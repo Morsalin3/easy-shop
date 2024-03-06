@@ -20,3 +20,9 @@ document.querySelectorAll(".nav-links").forEach(n => n.addEventListener("click",
   navContainer.classList.toggle("active");
 }));
 
+const names = document.getElementById("info");
+const input = document.getElementById("inp");
+const label = document.getElementById("lab");
+// console.log(label)
+
+

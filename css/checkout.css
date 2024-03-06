@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  --primary-color: #d51243;
+  --text-primary-color: #222222;
+  --text-secondary-color: #4a5568;
+
+}
+
+*{
+    padding: 0;
+    margin: 0 ;
+  }
+
+  body{
+    font-family: 'Poppins', sans-serif;
+  }
+
+ /* a{
+  text-decoration: none;
+ }
+ p{
+  font-size: 14px;
+
+ }  */
+
+ /* checkout main left start here  */
+ .checkout-main{
+    background-color: #f4f4f4;
+ }
+ .checkout-main ::placeholder{
+  font-size: 12px;
+ }
+ .payment-method ul li{
+  padding: 8px;
+ }
+ .payment-method ul li label{
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+ }
+
+ /* checkout main left end here  */
+
+ /* checkout cart section right start here  */
+ .checkout-cart p{
+  margin-bottom: 5px;
+ }
+ .checkout-thumbnail{
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+ .checkout-thumbnail span{
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #A2A2A2;
+  font-size: 12px;
+}
+.checkout-thumbnail img{
+  width: 100%;
+  height: 100%;
+}
+
+ /* checkout cart section right end here  */
