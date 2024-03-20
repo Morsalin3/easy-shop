@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>EasyShop</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -63,8 +63,8 @@
           </nav>
       </div>
 
-      <div class="nav-bottom "  > 
-          <nav class="navbars-bottom" >                  
+      <div class="nav-bottom"> 
+          <nav class="navbars-bottom d-none d-lg-block">                  
             <div class="categories d-none d-lg-block d-flex flex-column justify-content-center align-items-start">
       
               <button class="cate-btn btn fw-semibold" style="background-color: var(--primary-color);color: #fff;"><i class="fa-solid fa-bars me-2"></i>All Categories</button>
@@ -80,10 +80,7 @@
             </div>
 
             <div class="nav-container">
-              <div class="remove ">
-                <!-- <p class="m-0 py-1 fs-5">Menu</p> -->
-                <p class="m-0 py-1 fs-5">x</p>
-              </div>
+             
               <ul class="nav-menus mb-0 ps-0">
                 <li class="nav-items dropdown-menus">
                   <a href="#" class="nav-links">Home<i class="fa-solid fa-angle-down"></i></a>
@@ -117,24 +114,102 @@
                 </li>                    
               </ul>
             </div>
-        
 
             <div class="d-flex d-none d-lg-block">
               <div class=" d-flex justify-content-center align-items-center">
                
-                <button class="btn btn-sm text-white" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: #6655ff;"><i class="fa-solid fa-magnifying-glass"></i></button> 
-               
-                
+                <button class="btn btn-sm text-white" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: #6655ff;"><i class="fa-solid fa-magnifying-glass"></i></button>               
               </div>
-              <!-- <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </div> -->
             </div>
           </nav>
       </div>
 
+
+        <!-- mobile nav start here  -->
+        <div class="mob-nav-container d-block d-lg-none">
+          <div class="remove">
+            <!-- <p class="m-0 py-1 fs-5">Menu</p> -->
+            <p class="m-0 py-1 fs-5">x</p>
+          </div>
+          
+          <nav class="sidebar">
+            <div class="d-flex">
+              <a href="index.html" class="logo text-center m-auto">EasyShop</a>
+            </div>
+            <div class="menu-content">
+              <ul class="menu-items p-0">
+                <!-- <div class="menu-title">Your menu title</div> -->
+                <li class="item">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="item">
+                  <div class="submenu-item">
+                    <span>Pages</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <ul class="menu-items test-submenu">
+                    <div class="menu-title">
+                      <i class="fa-solid fa-chevron-left"></i>
+                      Back
+                    </div>
+                    <li class="item">
+                      <a href="cart.html">Cart</a>
+                    </li>
+                    <li class="item">
+                      <a href="product_details.html">Product Details</a>
+                    </li>
+                    <li class="item">
+                      <a href="checkout.html">Checkout</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <div class="submenu-item">
+                    <span>Shop</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <ul class="menu-items test-submenu">
+                    <div class="menu-title">
+                      <i class="fa-solid fa-chevron-left"></i>
+                      Back
+                    </div>
+                    <li class="item">
+                      <a href="#">Second sublink</a>
+                    </li>
+                    <li class="item">
+                      <a href="#">Second sublink</a>
+                    </li>
+                    <li class="item">
+                      <a href="#">Second sublink</a>
+                    </li>
+                    <li class="item">
+                      <a href="#">Second sublink</a>
+                    </li>
+                    <li class="item">
+                      <a href="#">Second sublink</a>
+                    </li>
+                    <li class="item">
+                      <a href="#">Last sublink</a>
+                    </li>          
+                  </ul>
+                </li>
+                <li class="item">
+                  <a href="#">About Us</a>
+                </li>
+                <li class="item">
+                  <a href="#">Contact Us</a>
+                </li>
+                <li class="item">
+                  <a href="#"><i class="fa-regular fa-user me-2 fs-6"></i>Login/Register</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+        </div>
+      <!-- mobile nav end here  -->
+
+      
           <!--search modal start here  -->
 
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -487,9 +562,52 @@
              <!-- product info end here  -->
           </div>
         </div>
-        <div class="col-lg-3 border mt-3 mt-md-0">
-          <div>
-            <p class="text-end">right</p>
+        <div class="col-lg-3 mt-3 mt-md-0 py-4" style="background-color: #f4f4f4;">
+          <h5 class="text-center trending-hr" >Trending Products</h5>
+          <div class="mt-4">
+            <div class="trending-product-box">
+              <div class="trending-img">
+                <img src="images/trending/Pear_1.png" alt="">
+              </div>
+              <div class="trending-desc">
+                <h5 class="mb-2">Fresh Pear</h5>
+                <p class="mb-2">5 KG</p>
+                <h6 class="m-0">$ 7.54 <del style="color: gray;">$ 7.00</del></h6>
+              </div>
+            </div>
+            <hr>
+            <div class="trending-product-box mt-3">
+              <div class="trending-img">
+                <img src="images/trending/Pomegranate_2.png" alt="">
+              </div>
+              <div class="trending-desc">
+                <h5 class="mb-2">Deliciously Swe...</h5>
+                <p class="mb-2">5 KG</p>
+                <h6 class="m-0">$ 7.54 <del style="color: gray;">$ 7.00</del></h6>
+              </div>
+            </div>
+            <hr>
+            <div class="trending-product-box mt-3">
+              <div class="trending-img">
+                <img src="images/trending/Pomegranate_2.png" alt="">
+              </div>
+              <div class="trending-desc">
+                <h5 class="mb-2">Deliciously Swe...</h5>
+                <p class="mb-2">5 KG</p>
+                <h6 class="m-0">$ 7.54 <del style="color: gray;">$ 7.00</del></h6>
+              </div>
+            </div>
+            <hr>
+            <div class="trending-product-box mt-3">
+              <div class="trending-img">
+                <img src="images/trending/Pomegranate_2.png" alt="">
+              </div>
+              <div class="trending-desc">
+                <h5 class="mb-2">Deliciously Swe...</h5>
+                <p class="mb-2">5 KG</p>
+                <h6 class="m-0">$ 7.54 <del style="color: gray;">$ 7.00</del></h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
