@@ -6,29 +6,29 @@ const navContainer = document.querySelector(".mob-nav-container");
 hamburger.addEventListener("click", () => {
   // hamburger.classList.toggle("active");
   navContainer.classList.add("active");
-
 });
 remove.addEventListener("click", () => {
   navContainer.classList.remove("active");
 });
 
-// const dropdowns = document.querySelectorAll(".dropdown-menus");
-// const subMenus = document.querySelectorAll(".submenu");
+document.querySelectorAll(".item").forEach(n => n.addEventListener("click", () => {
+  navContainer.classList.toggle("active");
+}));
 
-// dropdowns.forEach(dropdown => {
-//   dropdown.addEventListener("click", () => {
-//     const submenu = dropdown.nextElementSibling;
-    
-//     submenu.classList.toggle("active");
-//   });
-// });
+// for categories button 
+const categoriesCont = document.querySelector(".categories")
+const cateBtn =  document.querySelector(".cate-btn");
+const cateBox =  document.querySelector(".cate-box");
+const cateMenu = document.querySelector(".categories-menu");
 
+cateBtn && categoriesCont.addEventListener("mouseover", ()=>{
+  cateMenu.classList.add("active");
+});
+cateBtn && categoriesCont.addEventListener("mouseout", ()=>{
+  cateMenu.classList.remove("active");
+});
 
-// document.querySelectorAll(".nav-links").forEach(n => n.addEventListener("click", () => {
-//   navContainer.classList.toggle("active");
-// }));
-// hamburger.classList.remove("active");
-
+// for mobile menu
 const sidebar = document.querySelector(".sidebar");
 const sidebarClose = document.querySelector("#sidebar-close");
 const menu = document.querySelector(".menu-content");

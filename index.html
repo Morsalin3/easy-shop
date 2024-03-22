@@ -26,7 +26,8 @@
   
   <!-------- header start here  ----------->
   
-        <header class="container-xl gx-4">
+  <header class="bg-white fixed-top">
+        <div class="container-xl gx-4">
             <div class="nav-top ">
                 <nav class="navbars-top row">
                     <div class="col-2">
@@ -75,9 +76,9 @@
                 <nav class="navbars-bottom" >                  
                   <div class="categories d-none d-lg-block d-flex flex-column justify-content-center align-items-start">
             
-                    <button class="cate-btn btn fw-semibold" style="background-color: var(--primary-color);color: #fff;"><i class="fa-solid fa-bars me-2"></i>All Categories</button>
+                    <button class="cate-btn btn fw-normal" style="background-color: var(--primary-color);color: #fff;"><i class="fa-solid fa-bars me-2"></i>Categories</button>
                     
-                    <div class="cate-box ">
+                    <div class="cate-box shadow-lg">
                       <ul class="categories-menu p-2">
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Cosmetics</a></li>
@@ -90,21 +91,20 @@
                   <div class="nav-container">
                     <ul class="nav-menus mb-0 ps-0">
                       <li class="nav-items dropdown-menus">
-                        <a href="#" class="nav-links">Home<i class="fa-solid fa-angle-down"></i></a>
+                        <a href="javascript:void(0);" class="nav-links">Home<i class="fa-solid fa-angle-down"></i></a>
                           <ul class="submenu">
                             <li  class="nav-items"><a href="#" class="nav-links">Shop</a></li>
                             <li  class="nav-items"><a href="product_details.html" class="nav-links">Product Details</a></li>
                             <li  class="nav-items"><a href="wishlist.html" class="nav-links">Wishlist</a></li>
                             <li  class="nav-items"><a href="cart.html" class="nav-links">Cart</a></li>
                             <li  class="nav-items"><a href="checkout.html" class="nav-links">Checkout</a></li>
-     
                           </ul>
                       </li>
                       <li class="nav-items">
                         <a href="#" class="nav-links">Shop</a>
                       </li>
                       <li class="nav-items dropdown-menus">
-                        <a href="#" class="nav-links">Pages<i class="fa-solid fa-angle-down"></i></a>
+                        <a href="javascript:void(0);" class="nav-links">Pages<i class="fa-solid fa-angle-down"></i></a>
                           <ul class="submenu">
                             <li  class="nav-items"><a href="wishlist.html" class="nav-links">Wishlist</a></li>
                             <li  class="nav-items"><a href="cart.html" class="nav-links">Cart</a></li>
@@ -152,7 +152,7 @@
                       <li class="item">
                         <a href="index.html">Home</a>
                       </li>
-                      <li class="item">
+                      <li class="">
                         <div class="submenu-item">
                           <span>Pages</span>
                           <i class="fa-solid fa-chevron-right"></i>
@@ -173,7 +173,7 @@
                           </li>
                         </ul>
                       </li>
-                      <li class="item">
+                      <li class="">
                         <div class="submenu-item">
                           <span>Shop</span>
                           <i class="fa-solid fa-chevron-right"></i>
@@ -283,7 +283,8 @@
             </div>
               <!--search modal end here  -->
 
-        </header>
+        </div>
+  </header>
     <!---------- header end here  ---------->
 
          <!-- offcanvas start here  -->
@@ -427,7 +428,7 @@
        <!-- offcanvas end here  -->
 
        <!-- banner section start here  -->
-       <section class="container-xl py-4 gx-4">
+       <section class="container-xl top-banner py-4 gx-4">
         <div class="row">
           <div class="col-lg-8">
             <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
