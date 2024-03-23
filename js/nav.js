@@ -16,17 +16,18 @@ document.querySelectorAll(".item").forEach(n => n.addEventListener("click", () =
 }));
 
 // for categories button 
-const categoriesCont = document.querySelector(".categories")
 const cateBtn =  document.querySelector(".cate-btn");
-const cateBox =  document.querySelector(".cate-box");
 const cateMenu = document.querySelector(".categories-menu");
 
-cateBtn && categoriesCont.addEventListener("mouseover", ()=>{
-  cateMenu.classList.add("active");
+cateBtn.addEventListener("click", ()=>{
+  cateMenu.classList.toggle("active");
 });
-cateBtn && categoriesCont.addEventListener("mouseout", ()=>{
-  cateMenu.classList.remove("active");
-});
+document.querySelectorAll(".cate-item").forEach(n => n.addEventListener("click", () => {
+  cateMenu.classList.toggle("active");
+}));
+// categoriesCont.addEventListener("mouseout", ()=>{
+//   cateMenu.classList.remove("active");
+// });
 
 // for mobile menu
 const sidebar = document.querySelector(".sidebar");

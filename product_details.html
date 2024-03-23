@@ -22,18 +22,13 @@
       <div class="container-xl gx-4">
           <div class="nav-top ">
               <nav class="navbars-top row">
-                  <div class="col-2">
-                    <a href="index.html" class="nav-branding d-none d-lg-block" style="color: var(--primary-color);">EasyShop</a>
+                  <div class="col-3 d-flex justify-content-start gap-3 align-items-center">
                     <span class="nav-burger d-block d-lg-none"><i class="fa-solid fa-bars"></i></span>
+                    <a href="index.html" class="nav-branding d-none d-md-block" style="color: var(--theme-color);">EasyShop</a>
                   
                   </div>
                     
-                    <!-- <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search here" aria-label="Recipient's username" aria-describedby="button-addon2">
-                      <button class="btn btn-sm text-white" id="button-addon2" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: #6655ff;"><i class="fa-solid fa-magnifying-glass"></i></button>
-                      
-                    </div>    -->
-                  <div class="col-7 p-0 d-flex justify-content-between align-items-center rounded-1" style="background-color: #f3f4f7;">
+                  <div class="col-6 p-0 search-sec d-flex justify-content-center justify-content-md-between align-items-center rounded-1">
                     <div class="select-cont d-none d-md-block">
                       <select class="select-box px-2 px-lg-4 py-2" name="categories" id="" style="background-color: #f3f4f7;">
                         <option value="">All Categories</option>
@@ -46,9 +41,9 @@
                         <option value="6">Gift Sets</option>
                       </select>
                     </div>
-                    <input class="border-0 py-2 px-4 w-100" type="text" name="name" for="button-addon2" placeholder="I' am searching for" ria-label="I' am searching for" aria-describedby="button-addon2"style="background-color: #f3f4f7;">
-                    <button class="btn text-white rounded-0 rounded-end-1 py-2" id="button-addon2" type="submit"style="background-color: var(--primary-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <!-- <button class="btn btn-sm text-white" id="search-field" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #6655ff;"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                    <input class="border-0 py-2 px-4 w-100 d-none d-md-block" type="text" name="name" for="button-addon2" placeholder="I' am searching for" ria-label="I' am searching for" aria-describedby="button-addon2"style="background-color: #f3f4f7;">
+                    <button class="btn text-white rounded-0 rounded-end-1 py-2 d-none d-md-block" id="button-addon2" type="submit"style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <a href="index.html" class="nav-branding d-block d-md-none" style="color: var(--theme-color);">EasyShop</a>
                   </div>
 
                   <div class="col-3 nav-top-right">
@@ -57,10 +52,16 @@
                       <div class="divider d-none d-md-block">|</div>
                       <li class="d-none d-md-block"><a href="#"><i class="fa-regular fa-heart fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
                       <div class="divide d-none d-md-block">|</div>
-                      <li class="me-1"><a href="#"><i class="fa-regular fa-user fs-5"></i></a></li>
+                      <li class="me-1 user-icon position-relative d-none d-md-block"><a href="#"><i class="fa-regular fa-user fs-5"></i></a>
+                        <ul class="user-submenu shadow-lg p-2 rounded">
+                          <li><a href="#">Login</a></li>
+                          <hr class="m-0">
+                          <li><a href="#">Register</a></li>
+                        </ul>
+                      </li>
+                      <button class="btn btn-sm text-white d-block d-md-none" id="search-field" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: #d51243;"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </ul>
-                  </div>              
-                  
+                    </div>              
               </nav>
           </div>
 
@@ -68,14 +69,14 @@
               <nav class="navbars-bottom" >                  
                 <div class="categories d-none d-lg-block d-flex flex-column justify-content-center align-items-start">
           
-                  <button class="cate-btn btn fw-semibold" style="background-color: var(--primary-color);color: #fff;"><i class="fa-solid fa-bars me-2"></i>Categories</button>
+                  <button class="cate-btn btn fw-normal" style="background-color: var(--theme-color);color: #fff;"><i class="fa-solid fa-bars me-2"></i>Categories</button>
                   
-                  <div class="cate-box ">
+                  <div class="cate-box shadow-lg">
                     <ul class="categories-menu p-2">
-                      <li><a href="#">Products</a></li>
-                      <li><a href="#">Cosmetics</a></li>
-                      <li><a href="#">Gift Shop</a></li>
-                      <li><a href="#">Plastics Gift</a></li>
+                      <li class="cate-item"><a href="#">Products</a></li>
+                      <li class="cate-item"><a href="#">Cosmetics</a></li>
+                      <li class="cate-item"><a href="#">Gift Shop</a></li>
+                      <li class="cate-item"><a href="#">Plastics Gift</a></li>
                     </ul>
                   </div>
                 </div>
@@ -119,9 +120,7 @@
     
                 <div class="d-flex d-none d-lg-block">
                   <div class=" d-flex justify-content-center align-items-center">
-                   
-                    <button class="btn border-0" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="font-size: 15px;"><i class="fa-solid fa-phone me-1" style="color: #d51243;"></i><span style="font-weight: 500;">908. 408. 501. 89</span></button>
-                    
+                    <button class="btn border-0" style="font-size: 15px;"><i class="fa-solid fa-phone me-1" style="color: #d51243;"></i><span style="font-weight: 500;">908. 408. 501. 89</span></button>
                   </div>
                 </div>
               </nav>
@@ -144,7 +143,7 @@
                     <li class="item">
                       <a href="index.html">Home</a>
                     </li>
-                    <li class="item">
+                    <li class="">
                       <div class="submenu-item">
                         <span>Pages</span>
                         <i class="fa-solid fa-chevron-right"></i>
@@ -165,7 +164,7 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="item">
+                    <li class="">
                       <div class="submenu-item">
                         <span>Shop</span>
                         <i class="fa-solid fa-chevron-right"></i>
@@ -209,72 +208,8 @@
               </nav>
 
             </div>
-          <!-- mobile nav end here  -->
-
-
-              <!--search modal start here  -->
-    
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <!-- <h5 class="modal-title">Modal title</h5> -->
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4">
-                  <form>
-                    <div class="mb-3">
-                      <label for="recipient-name" class="col-form-label">Search</label>
-                      <input type="text" class="form-control" id="recipient-name">
-                    </div>
-    
-                  </form>
-                      <div class="container-sm px-4 px-sm-5 ">
-                        <a  href="#" class="card mb-3" style="max-width: 100%; ">
-                          <div class="d-flex flex-column flex-md-row justify-content-center align-content-center">
-                            <div class="search-card-image">
-                              <img src="../frontend/images/slide1.jpg" class="object-fit-cover" alt="">
-                            </div>
-                            <div class="search-dec p-3">
-                            <h4>This is a wider card with </h4>
-                            <p class="mb-0">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            </div>
-                          </div>
-                        </a>
-                        <a href="#" class=" card mb-3" style=" ">
-                        <div class="d-flex flex-column flex-md-row justify-content-center align-content-center">
-                          <div class="search-card-image">
-                            <img src="../frontend/images/slide2.jpg" class="bject-fit-cover" alt="">
-                          </div>
-                          <div class="search-dec p-3">
-                          <h4>This is a wider card with </h4>
-                          <p class="mb-0">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="#" class=" card mb-3" style="max-width: 100%; ">
-                      <div class="d-flex flex-column flex-md-row justify-content-center align-content-center">
-                        <div class="search-card-image">
-                          <img src="../frontend/images/slide1.jpg" class="bject-fit-cover" alt="">
-                        </div>
-                          <div class="search-dec p-3">
-                          <h4>This is a wider card with </h4>
-                          <p class="mb-0">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                          </div>
-                      </div>
-                    </a>
-                      </div>
-                      
-                </div>
-                <!-- <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary btn-sm">Submit</button>
-                </div> -->
-              </div>
-            </div>
-          </div>
-            <!--search modal end here  -->
-
+          <!-- mobile nav end here  -->   
+                       
       </div>
     </header>
   <!---------- header end here  ---------->
@@ -413,7 +348,7 @@
           <h5 class="d-flex justify-content-between">Total: <span> $205.55</span></h5>
       <div class="mt-3">
           <a href="#" class="btn view-btn w-100 py-3 mb-2 rounded-pill">View Cart</a>
-          <a hre="#" class="btn w-100 py-3 border-0 rounded-pill" style="background: var(--primary-color);font-weight: 500; color:#fff;">Checkout</a>
+          <a hre="#" class="btn w-100 py-3 border-0 rounded-pill" style="background: var(--theme-color);font-weight: 500; color:#fff;">Checkout</a>
       </div>
       </div>
       <!-- offcanvas footer end here  -->
@@ -491,7 +426,7 @@
             <div class="col-md-6 mt-3 mt-md-0">
               <h3 class="mb-3">Deliciously Premium Nachos</h3>
               <div class="d-flex justify-content-start align-items-center gap-2 gap-sm-5 mb-3">
-                <div class="stars" style="color: var(--primary-color);">
+                <div class="stars" style="color: var(--theme-color);">
                   <i class='bx bxs-star' ></i>
                   <i class='bx bxs-star' ></i>
                   <i class='bx bxs-star' ></i>
@@ -499,12 +434,12 @@
                   <i class='bx bx-star' ></i>
                   <p class="m-0 d-inline-block text-dark">0 Review</p>
                 </div>
-                <span class="border px-1 fw-semibold d-inline-block" style="color: var(--primary-color); font-size: 14px;">In Stock</span>
+                <span class="border px-1 fw-semibold d-inline-block" style="color: var(--theme-color); font-size: 14px;">In Stock</span>
               </div>
               <div class="d-flex justify-content-start align-items-center gap-2 gap-sm-5 mb-3">
-                <h4 class="fw-bold m-0" style="color: var(--primary-color);">$ 35.65</h4> 
+                <h4 class="fw-bold m-0" style="color: var(--theme-color);">$ 35.65</h4> 
                 <span class="text-dark-emphasis"><del>$ 6.00</del></span>
-                <span class="bg-danger-subtle px-1 rounded fw-semibold" style="color: var(--primary-color);">7% off</span>
+                <span class="bg-danger-subtle px-1 rounded fw-semibold" style="color: var(--theme-color);">7% off</span>
               </div>
               <div class="mb-3">
                 <p  style="font-size: 14px;color: var(--text-secondary-color);">
@@ -542,7 +477,7 @@
               <button class="d-flex justify-content-center align-items-center rounded-circle border" style="width: 40px; height: 40px;"><i class="fa-regular fa-heart fs-5"></i></button>
              </div>
              <div class="mb-3">
-              <button class="btn py-2 mt-3 text-white text-sm fw-semibold me-3" style="background-color: var(--primary-color);"><span><i class="fa-solid fa-cart-plus me-2"></i></span>Add To Cart</button>
+              <button class="btn py-2 mt-3 text-white text-sm fw-semibold me-3" style="background-color: var(--theme-color);"><span><i class="fa-solid fa-cart-plus me-2"></i></span>Add To Cart</button>
               <button class="btn py-2 mt-3 text-white text-sm bg-black fw-semibold">Buy Now</button>
              </div>
                <div class="mb-3">
@@ -623,7 +558,7 @@
       <div class="container-xl  ">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-4">
           <div class="col mb-4 mb-sm-0">
-            <a href="index.html" class="footer-branding text-center text-sm-start fw-semibold" style="color: var(--primary-color);">EasyShop</a>
+            <a href="index.html" class="footer-branding text-center text-sm-start fw-semibold" style="color: var(--theme-color);">EasyShop</a>
             <p class="footer-desc">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> 
 
             <div>

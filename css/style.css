@@ -2,7 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
-  --primary-color: #d51243;
+  --theme-color: #d51243;
   --text-primary-color: #222222;
   --text-secondary-color: #4a5568;
   --background-color: #f4f4f4;
@@ -31,9 +31,9 @@
  }
 
  .products-header-right{
-  color: var(--primary-color);
+  color: var(--theme-color);
   font-weight: 400;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--theme-color);
  }
  .products-header{
   display: inline-block;
@@ -62,6 +62,10 @@
   /* transition: background-color 5000s ease-in-out 0s; */
  }
 
+ .navbars-top .search-sec{
+  background-color: #f3f4f7;
+ }
+
   .select-box {
   border: none;
   outline: none;
@@ -77,9 +81,7 @@
     /* border-right: 1px solid rgb(116, 114, 114); */
     border-right: 1px solid #dddddd;
   }
-  .nav-top-right ul li{
-    /* margin-left: 20px; */
-  }
+
   .nav-top-right ul li a i{
     color: #4a5568;
   }
@@ -90,6 +92,44 @@
   margin: 0 10px;
   color: #dddddd;
  }
+
+ .user-submenu li {
+  margin: 5px 0;
+  transition: all .5s ease;
+  font-weight: 400;
+  list-style: none;
+}
+.user-submenu li:hover a {
+  color: var(--theme-color);
+}
+.user-submenu li a{
+  color: #222222;
+}
+ .user-icon .user-submenu{
+  list-style: none;
+  position: absolute;
+  width: 150px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 45px #00000020;
+  margin-top: 20px;
+  border-radius: 5px;
+  right: 0;
+  opacity: 0;
+  transition: all ease 0.5s;
+  text-align: start;
+  z-index: -999;
+  pointer-events: none;
+  border-top: 2px solid var(--theme-color);
+
+ }
+ .user-icon:hover .user-submenu{
+  z-index: 9999;
+  opacity: 1;
+  margin-top: 0;
+  pointer-events: auto;
+
+}
+
 
   /*------nav top end here-------*/
 
@@ -115,6 +155,7 @@
   
   .nav-branding{
     font-size: 1.5rem;
+    font-weight: 500;
   }
    .location {
     color: #0DCAF0;
@@ -150,7 +191,7 @@
   }
   
   .nav-container ul li:hover> a{
-    color: var(--primary-color);
+    color: var(--theme-color);
     & i {
     transform: translateX(5px) rotate(180deg);
     transition: all ease .5s;
@@ -158,12 +199,12 @@
   }
   
   .cate-box ul li {
-    margin: 5px 0;
+    margin: 10px 0;
     transition: all .5s ease;
     font-weight: 500;
   }
   .cate-box ul li:hover a {
-    color: var(--primary-color);
+    color: var(--theme-color);
   }
   .cate-box ul li a{
     color: #222222;
@@ -180,10 +221,11 @@
     transition: all ease 0.5s;
     text-align: start;
     z-index: -999;
+    border-top: 2px solid var(--theme-color);
 
   }
   .categories-menu.active{
-    z-index: 9999;
+    z-index: 999;
     opacity: 1;
     margin-top: 10px;
   }
@@ -200,7 +242,7 @@
     padding: 8px 10px;
     z-index: -999;
     transition: all 0.5s ease;
-    border-top: 2px solid var(--primary-color);
+    border-top: 2px solid var(--theme-color);
     pointer-events: none;
   }
  
@@ -221,13 +263,29 @@
   }
   .remove{
     display: none;
-    background-color: var(--primary-color);
+    background-color: var(--theme-color);
     width: 100%;
     /* height: 30px; */
     text-align: center;
     cursor: pointer;
     color: #fff;
    }
+
+   .search-card-image{
+    width: 100%;
+    }
+    
+  .search-card-image img{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 100%;
+    aspect-ratio: 6/5;
+    object-fit: cover;
+  }
+
+  .search-dec{
+    width: 100%;
+  }
 
    /*------nav bottom end here-------*/
 
@@ -260,7 +318,7 @@
     }
    }
    .slider-button:hover{
-    background-color: var(--primary-color);
+    background-color: var(--theme-color);
     color: #ffffff;
   }
 
@@ -285,7 +343,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    color: var(--primary-color);
+    color: var(--theme-color);
     top: 0;
     right: 5%;
     background-color: #ffffff;
@@ -299,7 +357,7 @@
    }
 
    .category-cont:hover span{
-    background-color: var(--primary-color);
+    background-color: var(--theme-color);
     color: #ffffff;
    }
    
@@ -312,7 +370,7 @@
     content: "";
     height: 2px;
     width: 0;
-    background-color: var(--primary-color);
+    background-color: var(--theme-color);
     display: block;
     transition: all 0.5s ease-in-out;
    }
@@ -320,7 +378,7 @@
     content: "";
     height: 2px;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--theme-color);
     display: block;
    }
 
@@ -340,7 +398,7 @@
     z-index: 999;
    }
    .product-icon:hover {
-    background-color: var(--primary-color);
+    background-color: var(--theme-color);
     color: #fff;
     transition: all 0.3s ease-in;
     }
@@ -386,7 +444,7 @@
     }
 
     .popular-product-cont .product-title:last-child{
-      color: var(--primary-color);
+      color: var(--theme-color);
       font-weight: 500;
       margin-top: 5px;
     }
@@ -402,19 +460,15 @@
       transition: all 0.3s ease;
     }
     .product-btn:hover{
-      color: var(--primary-color);
+      color: var(--theme-color);
     }
 /* -----------popular products end here -------- */
-/*-------- top rated products start here ------ */
-.top-rated-header{
-}
 
-/*-------- top rated products end here ------ */
 /* ---------offcanvas cart start here ----------- */
 .offcan-card-sec{
   height: calc(100vh - 350px);
   z-index: 1;
-  scrollbar-color: var(--primary-color) transparent;
+  scrollbar-color: var(--theme-color) transparent;
   scrollbar-width: thin;
 
 }
@@ -452,7 +506,7 @@
     background-color: #fff;
     z-index: 0;
     border-radius: 4px!important;
-    color: var(--primary-color);
+    color: var(--theme-color);
  }
  .cart-footer{
   background-color: #f4f4f4;
@@ -461,15 +515,15 @@
   color: var(--text-primary-color);
  }
  .cart-footer h5{
-  color: var(--primary-color);
+  color: var(--theme-color);
  }
  .cart-footer .view-btn {
-  border-color: var(--primary-color);
+  border-color: var(--theme-color);
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--theme-color);
  }
  .cart-footer .view-btn:hover {
-  background-color: var(--primary-color);
+  background-color: var(--theme-color);
   color: #fff;
  }
 /* ---------offcanvas cart end here ----------- */
@@ -505,7 +559,7 @@
      }
      
      .newsletter-input .subscribe-btn {
-      background-color: var(--primary-color);
+      background-color: var(--theme-color);
       color: #ffffff;
       font-size: 14px;
      }
@@ -555,14 +609,14 @@
   transition: all ease-out .3s;
 }
 .footer-links a:hover{
-  color: var(--primary-color);
+  color: var(--theme-color);
   margin-left: 5px;
 }
 .footer-links  i{
   font-size: 10px;
 }
 .footer-contact li i{
-  color: var(--primary-color);
+  color: var(--theme-color);
 }
 .footer-cont-desc {
   font-weight: 500;
@@ -576,7 +630,13 @@
 
  }
  @media screen and (max-width:576px){
-    /*--------- navbar start here--------- */
+  /*--------- navbar main start here--------- */
+
+  /*-------- nabvar top start here ----- */
+  .navbars-top .search-sec{
+    background-color: #ffffff;
+   }
+  /*------- nabvar top end here -------- */
 
 /*------ navbar bottom start here ---------- */
   .navbars-bottom{
@@ -668,7 +728,7 @@
   .submenu-item:hover,
   .test-submenu .menu-title:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: var(--primary-color);
+    color: var(--theme-color);
     transition: all .3s ease-in-out;
     border-color: #d51243;
   }
@@ -702,7 +762,7 @@
   }
  
   .mob-nav-container ul li a:hover  {
-    color: var(--primary-color);
+    color: var(--theme-color);
     transition: all .3s ease-in-out;
     border-color: #d51243;
   }
@@ -714,18 +774,19 @@
 
   .search-card-image{
     width: 100%;
-    height: 180px;
     }
+
    .search-card-image img{
      border-top-right-radius: 5px;
      border-top-left-radius: 5px;
      border-bottom-left-radius: 0;
-   }
-   .search-dec{
      width: 100%;
+     aspect-ratio: 16/8;
+     object-fit: cover;
    }
     /*-- navbar bottom end here- */
-   /*---------- navbar end here -------------- */
+
+   /*---------- navbar main end here -------------- */
  
   /* banner/slider section start here  */
   .top-banner{
@@ -764,7 +825,7 @@
   /* banner/slider section end here  */
 
    
-     /*---------- popular products start here -------- */
+/*---------- popular products start here -------- */
 .popular-product-box{
  height: 400px;
 
@@ -786,6 +847,12 @@
 
  @media screen and (min-width:576px) and (max-width: 768px){
   /*--------- navbar start here--------- */
+
+  /*-------- nabvar top start here ----- */
+  .navbars-top .search-sec{
+    background-color: #ffffff;
+   }
+  /*------- nabvar top end here -------- */
 
 /*------ navbar bottom start here ---------- */
 .navbars-bottom{
@@ -816,11 +883,9 @@
   z-index: 9999;
 
  }
-
  
  
 .sidebar {
-  /* position: fixed; */
   height: 100%;
   width: 100%;
   background: #11101d;
@@ -877,7 +942,7 @@
 .submenu-item:hover,
 .test-submenu .menu-title:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: var(--primary-color);
+  color: var(--theme-color);
   transition: all .3s ease-in-out;
   border-color: #d51243;
 }
@@ -911,7 +976,7 @@
 }
 
 .mob-nav-container ul li a:hover  {
-  color: var(--primary-color);
+  color: var(--theme-color);
   transition: all .3s ease-in-out;
   border-color: #d51243;
 }
@@ -920,11 +985,18 @@
  padding: 0 5px;
 }
 
+.search-card-image{
+  width: 100%;
+  }
 
-  .search-card-image{
-    width: 100%;
-    height: 200px;
-    }
+ .search-card-image img{
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 0;
+   width: 100%;
+   aspect-ratio: 16/8;
+   object-fit: cover;
+ }
 
     /*---------- navbar bottom end here ---------- */
     /*---------- navbar end here  ------------*/
@@ -1048,7 +1120,7 @@
 .submenu-item:hover,
 .test-submenu .menu-title:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: var(--primary-color);
+  color: var(--theme-color);
   transition: all .3s ease-in-out;
   border-color: #d51243;
 }
@@ -1082,7 +1154,7 @@
 }
 
 .mob-nav-container ul li a:hover  {
-  color: var(--primary-color);
+  color: var(--theme-color);
   transition: all .3s ease-in-out;
   border-color: #d51243;
 }
@@ -1091,10 +1163,18 @@
  padding: 0 5px;
 }
 
-   .search-card-image{
-     width: 280px;
-     height: 200px;
-     }
+.search-card-image{
+  width: 100%;
+  }
+
+ .search-card-image img{
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 0;
+   width: 100%;
+   aspect-ratio: 16/8;
+   object-fit: cover;
+ }
   /*-------- navbar bottom end here ---------- */
   /*---------- navbar end here --------------- */
 
