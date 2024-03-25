@@ -28,7 +28,7 @@
  /* cart banner start here  */
 
 .cart-banner{
-    background-image: url('/images/cart-banner.jpg');
+    background-image: url('/images/banner/cart-banner.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

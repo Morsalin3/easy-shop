@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="css/checkout.css">
-
+    <link rel="stylesheet" href="css/about.css">
+      <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
-    
+
     <!-------- header start here  ----------->
   
     <header class="bg-white fixed-top shadow-sm">
@@ -104,13 +106,13 @@
                    
                     </li>
                     <li class="nav-items">
-                      <a href="about_us.html" class="nav-links">About Us</a>
+                      <a href="#" class="nav-links">About Us</a>
                     </li>
                     <li class="nav-items">
                       <a href="#" class="nav-links">Blog</a>
                     </li>
                     <li class="nav-items">
-                      <a href="shop.html" class="nav-links">Contact Me</a>
+                      <a href="contact_us.html" class="nav-links">Contact Us</a>
                     </li>                    
                   </ul>
                 </div>
@@ -196,7 +198,7 @@
                       <a href="about_us.html">About Us</a>
                     </li>
                     <li class="item">
-                      <a href="#">Contact Us</a>
+                      <a href="contact_us.html">Contact Us</a>
                     </li>
                     <li class="item">
                       <a href="#"><i class="fa-regular fa-user me-2 fs-6"></i>Login/Register</a>
@@ -211,6 +213,7 @@
       </div>
     </header>
     <!---------- header end here  ---------->
+
     <!--search modal start here  -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -222,7 +225,7 @@
           <div class="modal-body p-4">
             <form>
               <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Search</label>
+                <label for="recipient-name" class="col-form-label text-black fw-light">Search</label>
                 <input type="text" class="form-control" id="recipient-name">
               </div>
             </form>
@@ -269,8 +272,8 @@
     </div>
     <!--search modal end here  -->
     
-      <!-- offcanvas start here  -->
-      <div class="offcanvas offcanvas-end d-none d-md-block" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <!-- offcanvas start here  -->
+    <div class="offcanvas offcanvas-end d-none d-md-block" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header bg-danger-subtle">
         <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Cart</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -294,8 +297,8 @@
                 </a>
                 
                 <div class="col-8 offc-card-right position-relative">
-                    <h5 class="fs-6">Nutrient-Rich Eggplant</h5>
-                    <h6 class="">$20.35</h6>
+                    <h5 class="fs-6">Nutrient-Rich Eggplanttt</h5>
+                    <h6 class="">$11.35</h6>
                     <div class="input-box rounded d-flex justify-content-between align-items-center border">
                     <button class="offc-plus-btn  border-0 fw-bold">+</button>
                     <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
@@ -409,280 +412,184 @@
     </div>
     <!-- offcanvas end here  -->
 
-    <!---- checkout page banner start here  ---->
+    <!---- cart page banner start here  ---->
     <section class="cart-banner mb-4 top-banner">
-      <div class="container-xl gx-4">
-            <a href="index.html">Home</a>>&nbsp;<span class="text-muted">Checkout</span>
+        <div class="container-xl gx-4">
+          <a href="index.html">Home</a>>&nbsp;<span class="text-muted">Contact Us</span></a>
         </div>
     </section>
-    <!----- checkout page banner end here  ----->
+    <!----- cart page banner end here  ----->
 
-    <!---- checkout main section start here  ---->
-    <section class="container-xl gx-4 py-4">
-        <div class="checkout-main p-3 p-md-2">
-           <form action="">
-                <div class="row">
-                   <!-- prodcuts checkout left start here  -->
-                    <div class="col-md-8 mb-4 mb-md-0 pe-3 pe-md-1">
-                        <div class="bg-white p-3 rounded h-100">
+ 
+    <!------- main section start here ------->
 
-                             <!-- shipping info start here  -->
-                          <div class="shipping-info">
-                              <h5 class="pb-2">Shipping Information</h5>
-                              <div class="row">
-                                  <div id="info" class="col-12 mb-3">
-                                      <input id="inp" type="text" class="form-control" placeholder="Full Name">
-                                  </div>
-                                  <div class="col-md-8 mb-3">
-                                      <input type="text" class="form-control" id="forEmail" placeholder="Your Email">
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                      <input type="text" class="form-control" id="forPhone" placeholder="Your Phone">
-                                  </div>
-                                  <div class="col-md-6 mb-3">
-                                    <select class="form-select py-2" aria-label="Default select example" style="font-size: 12px;">
-                                      <option selected>Select Country...</option>
-                                      <option value="1">Bangladesh</option>
-                                      <option value="2">Maldiv</option>
-                                      <option value="3">Singapur</option>
-                                      <option value="4">Malaysia</option>
-                                    </select>
-                                  </div>
-                                  <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control"  placeholder="Division">
-                                    </div>
-                                  <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" placeholder="District">
-                                    </div>
-                                  <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" placeholder="Upazila">
-                                  </div>
-                                  <div class="col-12 mb-3">
-                                    <input type="text" class="form-control" placeholder="Address">
-                                  </div>
-                              </div>
-                           </div>
-                           <!-- shipping info end here  -->
-                           
-                           <!-- billing info start here  -->
-
-                           <div class="billing-info">
-                              <h5 class="pt-2">Billing Information</h5>
-                              <div class="form-check pb-3">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                  Same as shipping information
-                                </label>
-                              </div>
-                              <div class="row">
-                                <div id="info" class="col-12 mb-3">
-                                    <input id="inp" type="text" class="form-control" placeholder="Full Name">
-                                </div>
-                                <div class="col-md-8 mb-3">
-                                    <input type="text" class="form-control" id="forEmail" placeholder="Your Email">
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <input type="text" class="form-control" id="forPhone" placeholder="Your Phone">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                  <select class="form-select py-2" aria-label="Default select example" style="font-size: 12px;">
-                                    <option selected>Select Country...</option>
-                                    <option value="1">Bangladesh</option>
-                                    <option value="2">Maldiv</option>
-                                    <option value="3">Singapur</option>
-                                    <option value="4">Malaysia</option>
-                                  </select>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                  <input type="text" class="form-control"  placeholder="Division">
-                                 </div>
-                                <div class="col-md-6 mb-3">
-                                  <input type="text" class="form-control" placeholder="District">
-                                 </div>
-                                <div class="col-md-6 mb-3">
-                                  <input type="text" class="form-control" placeholder="Upazila">
-                                </div>
-                                <div class="col-12 mb-3">
-                                  <input type="text" class="form-control" placeholder="Address">
-                                </div>
+    <!-- about us section start here  -->
+    <section class="container-xl gx-4 py-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col mb-4 mb-lg-0">
+                <div class="about-left px-4">
+                    <div class="row row-cols-1 row-cols-sm-2">
+                        <div class="col">
+                            <div class="image1 d-none d-sm-block">
+                            <img src="images/product/product-4.jpg" width="100%" class="object-fit-cover" alt="">
                             </div>
+                        </div>
+                        <div class="col">
+                           <div class="image2">
+                            <img src="images/product/product-1.jpg" width="100%" class="object-fit-cover" alt="">
                            </div>
-                           <!-- billing info end here  -->
-
-                           <!-- shipping method start here  -->
-                           <div class="shipping-method">
-                             <h5 class="pt-2">Shipping Method</h5>
-                              <div class="border p-2 rounded">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                  <label class="form-check-label" for="flexRadioDefault1">
-                                    Free Delivery - Free Shipping
-                                  </label>
-                                </div>
-                              </div>
-                           </div>
-                           <!-- shipping method end here  -->
-
-
-                            <!-- payment method start here  -->
-                           <div class="payment-method">
-                            <h5 class="pt-3">Payment Method</h5>
-                            <div>
-                              <ul class="list-unstyled border rounded">
-                                <li class="border-bottom">
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="stripe">
-                                    <label class="form-check-label" for="stripe"  style="font-size: 12px;">
-                                      Pay online via Stripe (International and Domestic)
-                                    </label>
-                                  </div>
-                                </li>
-                                <li class="border-bottom p-2">
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="paypal">
-                                    <label class="form-check-label" for="paypal">
-                                      Fast and safe online payment via PayPal
-                                    </label>
-                                  </div>
-                                </li>
-                                <li class="border-bottom p-2">
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="rozario">
-                                    <label class="form-check-label" for="rozario">
-                                      Payment with Razorpay
-                                    </label>
-                                  </div>
-                                </li>
-                                <li class="border-bottom p-2">
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="cashOn">
-                                    <label class="form-check-label" for="cashOn">
-                                      Cash on delivery (COD)
-                                    </label><br>
-                                    <span style="font-size: 12px;">Please pay money directly to the postman, if you choose cash on delivery method (COD).</span>
-                                  </div>
-                                </li>
-                                <li class="border-bottom p-2">
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="bank-transfer">
-                                    <label class="form-check-label" for="bank-transfer">
-                                      Bank transfer
-                                    </label>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                           </div>
-                           <!-- payment method end here  -->
-
-                           <div>
-                            <h5>Order Notes</h5>
-                            <div class="form-floating">
-                              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 60px;font-size: 14px;"></textarea>
-                              <label for="floatingTextarea">Comments</label>
-                            </div>
-                           </div>
-
-                           <div class="py-3 fw-semibold">
-                            <a href="cart.html" style="color: var(--theme-color);"><i class="fa-solid fa-arrow-left-long me-1"></i>Back to Cart</a>
-                           </div>
-
                         </div>
                     </div>
-                    <!-- prodcuts checkout left end here  -->
-
-                    <!-- products cart checkout right start here  -->
-                    <div class="col-md-4 ps-3 ps-md-1">
-                        <div class="bg-white p-3 rounded h-100">
-                            <!-- main checkout cart  section start here  -->
-
-                              <div class="checkout-cart">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                      <div class="checkout-thumbnail">
-                                        <img src="images/product/product-3.jpg" class="rounded" alt="">
-                                        <span class="d-flex justify-content-center align-items-center">2</span>
-                                      </div>
-                                      <div class="checkout-desc px-1">
-                                          <p>Corn, Yellow Sweet </p>
-                                          <p>(Color: Blue, Size: M)</p>
-                                      </div>
-                                      <div>
-                                        <p>$566</p>
-                                      </div>
-                                    </div>
-                                    <hr>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                      <div class="checkout-thumbnail">
-                                        <img src="images/product/product-5.jpg" class="rounded" alt="">
-                                        <span class="d-flex justify-content-center align-items-center">2</span>
-                                      </div>
-                                      <div class="checkout-desc px-1">
-                                          <p>Corn, Yellow Sweet </p>
-                                          <p>(Color: Blue, Size: M)</p>
-                                      </div>
-                                      <div>
-                                        <p>$566</p>
-                                      </div>
-                                    </div>
-                                    <hr>
-                              </div>
-
-                          <!-- main checkout cart  section start here  -->
-
-                          <!-- cart amount sec start here  -->
-                          <div class="py-4">
-                              <div class="row">
-                                  <div class="col-12 mb-3">
-                                      <div class="row">
-                                        <div class="col-sm-6 mb-3">
-                                          <input type="text"  class="form-control  py-2 text-center" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Coupon Code">
-                                        </div>
-                                          <div class="col-sm-6">
-                                              <button class="btn py-2 w-100" style="background-color: var(--theme-color); color: #fff;font-size: 14px;">Applay</button>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-12">
-                                      <div class="table-responsive-lg">
-                                          <table class="table border table-light">
-                                            
-                                              <tbody style="font-size: 14px;">
-                                              <tr>
-                                                  <td class="text-start align-middle">Subtotal</td>
-                                                  <td class="text-end align-middle">$203</td>
-                                              </tr>
-                                              <tr>
-                                                  <td class="text-start align-middle">Tax (VAT-10%)</td>
-                                                  <td class="text-end align-middle">$52</td>
-                                              </tr>
-                                              <tr>
-                                                  <td class="text-start align-middle">Shipping fee</td>
-                                                  <td class="text-end align-middle">$52</td>
-                                              </tr>
-                                              <tr>
-                                                  <td class="text-start align-middle fw-semibold">Total</td>
-                                                  <td class="text-end align-middle fw-semibold">$255.32</td>
-                                              </tr>
-                                              </tbody>
-                                            </table>
-                                      </div>
-                                      <a href="" class="btn py-2 mt-3 text-white text-sm w-100" style="background-color: var(--theme-color); font-size: 14px;">Place Order</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <!-- cart amount sec end here  -->
-                        </div>
-                    </div>
-                    <!-- products cart checkout right start here  -->
                 </div>
-           </form>
+            </div>
+            <div class="col">
+               <div class="about-right px-4">
+                <p>About Us</p>
+                <h3 class="mb-4">We Make Organic Food In <br> Market</h3>
+                <div>
+                    <p class="about-desc">
+                        Just a few seconds to measure your body temperature. Up to 5 users! The battery lasts up to 2 years. There are many variations of passages of Lorem Ipsum available.We started in 2019 and haven't stopped smashing it since. A global brand that doesn't sleep, we are 24/7 and always bringing something new with over 100 new products dropping on the monhtly, bringing you the latest looks for less.
+                    </p>
+                    <p><i class="fa-solid fa-truck"></i>&nbsp;&nbsp;<span class="fw-medium">Free delivery for all orders</span></p>
+                    <p><i class="fa-brands fa-cotton-bureau"></i></i>&nbsp;&nbsp;<span class="fw-medium">Original products</span></p>
+                </div>
+               </div>
+            </div>
         </div>
     </section>
-    <!----- checkout main section  end here  ----->
+        <!-- about us section end here  -->
 
+        <!-- Latest Testimonials start here  -->
+        <section style="background-color: #f4f4f4;">
+            <div class="container-xl gx-4 py-5 position-relative" >
+                <div class="text-center mb-5">
+                    <p style="color: var(--theme-color);">Latest Testimonials</p>
+                    <h3>What People Say</h3>
+                </div>
+                <div>
+                      <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                            <div class="p-4 border-0">
+                                    <div class="testimonial-desc">
+                                        <h5 class="mb-3">Disappointing Experience</h5>
+                                        <p>I had high hopes for this product, but it fell short of my expectations. It  constantly crashes and lacks essential features. I wouldn't recommend it.
+                                        </p>
+                                    </div>
+                                    <div class="profile-box d-flex justify-content-start gap-3 align-items-center">
+                                        <div class="profile-img">
+                                            <img src="images/profile/user_3.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <h5>Bettly J. Turner</h5>
+                                            <p>CEO, Company</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="p-4 border-0">
+                                    <div class="testimonial-desc">
+                                        <h5 class="mb-3">Excilent Customer Service</h5>
+                                        <p>I had high hopes for this product, but it fell short of my expectations. It  constantly crashes and lacks essential features. I wouldn't recommend it.
+                                        </p>
+                                    </div>
+                                    <div class="profile-box d-flex justify-content-start gap-3 align-items-center">
+                                        <div class="profile-img">
+                                            <img src="images/profile/user_2.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <h5>John Doe</h5>
+                                            <p>Projec Manager</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="p-4 border-0">
+                                    <div class="testimonial-desc">
+                                        <h5 class="mb-3">Top Quality, Beautiful Location</h5>
+                                        <p>I had high hopes for this product, but it fell short of my expectations. It  constantly crashes and lacks essential features. I wouldn't recommend it.
+                                        </p>
+                                    </div>
+                                    <div class="profile-box d-flex justify-content-start gap-3 align-items-center">
+                                        <div class="profile-img">
+                                            <img src="images/profile/user_3.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <h5>Bettly J. Turner</h5>
+                                            <p>CEO, Company</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="p-4 border-0">
+                                    <div class="testimonial-desc">
+                                        <h5 class="mb-3">Disappointing Experience</h5>
+                                        <p>I had high hopes for this product, but it fell short of my expectations. It  constantly crashes and lacks essential features. I wouldn't recommend it.
+                                        </p>
+                                    </div>
+                                    <div class="profile-box d-flex justify-content-start gap-3 align-items-center">
+                                        <div class="profile-img">
+                                            <img src="images/profile/user_3.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <h5>Bettly J. Turner</h5>
+                                            <p>CEO, Company</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="p-4 border-0">
+                                    <div class="testimonial-desc">
+                                        <h5 class="mb-3">Disappointing Experience</h5>
+                                        <p>I had high hopes for this product, but it fell short of my expectations. It  constantly crashes and lacks essential features. I wouldn't recommend it.
+                                        </p>
+                                    </div>
+                                    <div class="profile-box d-flex justify-content-start gap-3 align-items-center">
+                                        <div class="profile-img">
+                                            <img src="images/profile/user_1.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <h5>Bettly J. Turner</h5>
+                                            <p>CEO, Company</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="p-4 border-0">
+                                    <div class="testimonial-desc">
+                                        <h5 class="mb-3">Disappointing Experience</h5>
+                                        <p>I had high hopes for this product, but it fell short of my expectations. It  constantly crashes and lacks essential features. I wouldn't recommend it.
+                                        </p>
+                                    </div>
+                                    <div class="profile-box d-flex justify-content-start gap-3 align-items-center">
+                                        <div class="profile-img">
+                                            <img src="images/profile/user_2.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <h5>Alfredo S. Rocha</h5>
+                                            <p>Sr. Project Manager</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Latest Testimonials end here  -->
 
-       <!--------- footer start here ------------>
-       <section class="footer mt-4 ">
+    <!------- main section end here  ------->
+
+    <!--------- footer start here ------------>
+    <section class="footer mt-4 ">
         <div class="container-xl  ">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-4">
             <div class="col mb-4 mb-sm-0">
@@ -690,14 +597,11 @@
               <p class="footer-desc">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> 
   
               <div>
-                <div class="footer-social ">
-                  <li class=""><a href="#"><img src="../frontend/images/social-icon/facebook.png" alt=""></a></li>
-                  <li class=""><a href="#"><img src="../frontend/images/social-icon/whatsapp.png" alt=""></a></li>
-                  <li class=""><a href="#"><img src="../frontend/images/social-icon/linkedin.png" alt=""></a></li>
-                  <li class=""><a href="#"><img src="../frontend/images/social-icon/youtube.png" alt=""></a></li>
-                  <!-- <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li> -->
+                <div class="footer-social">
+                  <li class=""><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+                  <li class=""><a href="#"><i class='bx bxl-whatsapp' ></i></a></li>
+                  <li class=""><a href="#"><i class='bx bxl-linkedin' ></i></a></li>
+                  <li class=""><a href="#"><i class='bx bxl-youtube' ></i></a></li>
                 </div>          
               </div>
   
@@ -707,7 +611,7 @@
               <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Categories Links</h5>
               <div class="footer-links d-flex flex-column text-start fw-medium">
               <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Home</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>About Us</a> </p>
+              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>About Me</a> </p>
               <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Research</a> </p>
               <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Blog</a> </p>
               <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Session</a> </p>
@@ -758,8 +662,42 @@
     <!------------ footer end here ----------->
 
 
-     <!---------- javascript links here ---------->
-      <script src="js/bootstrap.min.js"></script>
-     <script src="/js/nav.js"></script>
+
+     <!-- bootstrap and nav link  -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/nav.js"></script>
+
+    
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  </script>
+    
 </body>
 </html>
