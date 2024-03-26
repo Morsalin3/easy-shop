@@ -30,19 +30,17 @@
   font-size: 14px;
  }
 
- .products-header-right{
-  color: var(--theme-color);
-  font-weight: 400;
-  border-bottom: 2px solid var(--theme-color);
- }
- .products-header{
-  display: inline-block;
- }
 
+ /* top scroll navbar start here  */
+ .scroll-nav{
+  top: -70px;
+  transition: top .3s ease;
+ }
+ /* top scroll navbar end here  */
 
   /*---------- nav top start here-----------*/
   .navbars-top{
-    min-height: 70px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,9 +141,14 @@
     width: 92%; */
     margin: 0 auto;
   }
+
+  #nav-bottom{
+    top: -70px;
+    /* position: fixed; */
+  }
   
   .navbars-bottom{
-    min-height: 70px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -284,14 +287,10 @@
   .search-dec{
     width: 100%;
   }
-
    /*------nav bottom end here-------*/
 
+
    /*-------------- slider start here---------- */
-   .top-banner{
-    margin-top: 140px;
-    overflow: hidden;
-   }
    .carousel-item img{
     height: 400px;
    }
@@ -324,6 +323,29 @@
     height: 200px;
    }
    /*-------------- slider end here------------ */
+
+    
+  /*------------  banner start here  ---------*/
+   /* this section is for other pages without index page  */
+  .cart-banner{
+    background-image: url('/images/banner/cart-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 60px 0;
+  }
+  .cart-banner a{
+    color: var(--text-primary-color);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 10px 0 0;
+  }
+  .cart-banner a span{
+    color: var(--text-secondary-color);
+    font-size: 14px;
+    font-weight: normal;
+  }
+  /*-------------  banner end here  --------------*/
 
    /*----------Top categories section start here------- */
    .category-box{
@@ -381,11 +403,47 @@
    }
 
 
-  
    /*-------Top categories section end here-----------  */
 
+   /*--------- this section only for shop page -------*/
+   .products-search-sec input[type=text] {
+    max-width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    background:#f3f4f7;
+    font-size: 14px;
+  }
+  .products-search-sec input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus{
+  border: none;
+  /* -webkit-text-fill-color: #fff; */
+  -webkit-box-shadow: 0 0 0px 100px #f3f4f7 inset;
+  /* transition: background-color 5000s ease-in-out 0s; */
+  }
+
+  .products-search-sec{
+  background-color: #f3f4f7;
+  }
+
+  .products-search-header::after{
+  content: "";
+  width: 250px;
+  height: 2px;
+  background-color: var(--theme-color);
+  display: block;
+  margin: 0 auto;
+  }
+   /*------ this section only for shop page ------*/
 
    /* -----------popular products start here -------- */
+   .products-header-right{
+    color: var(--theme-color);
+    font-weight: 400;
+    border-bottom: 2px solid var(--theme-color);
+   }
+   .products-header{
+    display: inline-block;
+   }
+  
    .popular-product-main{
     position: relative;
    }
@@ -624,9 +682,47 @@
   color: var(--text-secondary-color);
 }
 
-   /*-------------- footer end here-----------------  */
-  
- /* media queries start here  */
+   /*------------ footer end here-------------- */
+
+  /* bottom to top scroll button start here  */
+  .to-top {
+    background: var(--theme-color);
+    position: fixed;
+    bottom: 16px;
+    right:32px;
+    width:40px;
+    height:40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:16px;
+    color:#ffffff;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+  .to-top::after{
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, .25) 0, transparent 80%);
+    content: "";
+    height: 10px;
+    inset-inline-start: 5%;
+    opacity: 1;
+    position: absolute;
+    top: 100%;
+    width: 90%;
+    z-index: -1;
+}
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
+}
+  /* bottom to top scroll button end here  */
+
+
+ /*------- media queries start here  -------------*/
  @media screen and (min-width:250px) and (max-width: 300px){
 
  }
@@ -640,13 +736,13 @@
   /*------- nabvar top end here -------- */
 
 /*------ navbar bottom start here ---------- */
-  .navbars-bottom{
-    min-height: 0px;
-  }
+  /* .navbars-bottom{
+    height: 0px;
+  } */
 
   /* for mobile nabvar start here  */
    .mob-nav-container {
-    position: absolute;
+    position: fixed;
     left: -100%;
     width: 70%;
     height: auto;
@@ -826,6 +922,12 @@
   }
   /* banner/slider section end here  */
 
+/*------ this section only for shop page ------*/
+  .products-search-header::after{
+    width: 220px;
+ 
+    }
+     /*------ this section only for shop page ------*/
 
 /* ------------footer start here --------- */
 
@@ -851,12 +953,12 @@
   /*------- nabvar top end here -------- */
 
 /*------ navbar bottom start here ---------- */
-.navbars-bottom{
-  min-height: 0px;
-}
+/* .navbars-bottom{
+  height: 0px;
+} */
 
 .mob-nav-container {
-  position: absolute;
+  position: fixed;
   left: -100%;
   width: 70%;
   height: auto;
@@ -1020,12 +1122,12 @@
    /*--------- navbar start here--------- */
 
 /*------ navbar bottom start here ---------- */
-.navbars-bottom{
-  min-height: 0px;
-}
+/* .navbars-bottom{
+  height: 0px;
+} */
 
 .mob-nav-container {
-  position: absolute;
+  position: fixed;
   left: -100%;
   width: 70%;
   height: auto;

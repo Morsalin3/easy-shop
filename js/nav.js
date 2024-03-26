@@ -1,12 +1,13 @@
 
+// navbar start here 
 const hamburger = document.querySelector(".nav-burger");
 const remove = document.querySelector(".remove");
 const navContainer = document.querySelector(".mob-nav-container");
 
-hamburger.addEventListener("click", () => {
-  // hamburger.classList.toggle("active");
+document.querySelectorAll(".nav-burger").forEach(n =>n.addEventListener("click", ()=>{
   navContainer.classList.add("active");
-});
+}));
+
 remove.addEventListener("click", () => {
   navContainer.classList.remove("active");
 });
@@ -25,11 +26,18 @@ cateBtn.addEventListener("click", ()=>{
 document.querySelectorAll(".cate-item").forEach(n => n.addEventListener("click", () => {
   cateMenu.classList.toggle("active");
 }));
-// categoriesCont.addEventListener("mouseout", ()=>{
-//   cateMenu.classList.remove("active");
-// });
 
-// for mobile menu
+//  for top scroll navbar 
+window.addEventListener("scroll", ()=>{
+  if (document.documentElement.scrollTop > 20) {
+    document.querySelector(".scroll-nav").style.top = "0";
+  } else {
+    document.querySelector(".scroll-nav").style.top = "-70px";
+  }
+});
+
+
+//  mobile menu start here
 const sidebar = document.querySelector(".sidebar");
 const sidebarClose = document.querySelector("#sidebar-close");
 const menu = document.querySelector(".menu-content");
@@ -52,5 +60,25 @@ subMenuTitles.forEach((title) => {
     menu.classList.remove("submenu-active");
   });
 });
+//  mobile menu end here
+
+// navbar end here 
 
 
+// for bottom to top scroll button 
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+})
+
+toTop.addEventListener("click", ()=>{
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+})

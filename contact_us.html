@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 
-    <!-------- header start here  ----------->
-  
-    <header class="bg-white fixed-top shadow-sm">
+  <!-------- header sections start here  ----------->
+      
+  <!-- scroll navbar start here  -->
+  <header class="bg-white shadow-sm scroll-nav fixed-top">
       <div class="container-xl gx-4">
-          <div class="nav-top ">
+          <div class="nav-top">
               <nav class="navbars-top row">
                   <div class="col-3 d-flex justify-content-start gap-3 align-items-center">
                     <span class="nav-burger d-block d-lg-none"><i class="fa-solid fa-bars"></i></span>
@@ -51,7 +51,58 @@
                       <li class="d-none d-md-block"><a href="#"><i class="fa-regular fa-heart fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
                       <div class="divide d-none d-md-block">|</div>
                       <li class="me-1 user-icon position-relative d-none d-md-block"><a href="#"><i class="fa-regular fa-user fs-5"></i></a>
-                        <ul class="user-submenu shadow-lg p-2 rounded">
+                        <ul class="user-submenu p-2 rounded">
+                          <li><a href="#">Login</a></li>
+                          <hr class="m-0">
+                          <li><a href="#">Register</a></li>
+                        </ul>
+                      </li>
+                      <button class="btn btn-sm text-white d-block d-md-none" id="search-field" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </ul>
+                    </div>              
+              </nav>
+          </div> 
+
+      </div>
+  </header>
+  <!-- scroll navbar end here  -->
+
+  <header class="bg-white shadow-sm">
+      <div class="container-xl gx-4">
+          <div class="nav-top">
+              <nav class="navbars-top row">
+                  <div class="col-3 d-flex justify-content-start gap-3 align-items-center">
+                    <span class="nav-burger d-block d-lg-none"><i class="fa-solid fa-bars"></i></span>
+                    <a href="index.html" class="nav-branding d-none d-md-block" style="color: var(--theme-color);">EasyShop</a>
+                  
+                  </div>
+                    
+                  <div class="col-6 p-0 search-sec d-flex justify-content-center justify-content-md-between align-items-center rounded-1">
+                    <div class="select-cont d-none d-md-block">
+                      <select class="select-box px-2 px-lg-4 py-2" name="categories" id="" style="background-color: #f3f4f7;">
+                        <option value="">All Categories</option>
+                        <option value="0">Sunglasses</option>
+                        <option value="1">Bags & Purses</option>
+                        <option value="2">Silk Accessories</option>
+                        <option value="3">Cosmetics</option>
+                        <option value="4">Handy Cream</option>
+                        <option value="5">Plastics Gift</option>
+                        <option value="6">Gift Sets</option>
+                      </select>
+                    </div>
+                    <input class="border-0 py-2 px-4 w-100 d-none d-md-block" type="text" name="name" for="button-addon2" placeholder="I' am searching for" ria-label="I' am searching for" aria-describedby="button-addon2"style="background-color: #f3f4f7;">
+                    <button class="btn text-white rounded-0 rounded-end-1 py-2 d-none d-md-block" id="button-addon2" type="submit"style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <a href="index.html" class="nav-branding d-block d-md-none" style="color: var(--theme-color);">EasyShop</a>
+                  </div>
+
+                  <div class="col-3 nav-top-right">
+                    <ul class="d-flex justify-content-end align-content-center list-unstyled mb-0">
+                      <li class="d-none d-md-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><a href="#"><i class="fa-solid fa-cart-plus fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                      <div class="divider d-none d-md-block">|</div>
+                      <li class="d-none d-md-block"><a href="#"><i class="fa-regular fa-heart fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                      <div class="divide d-none d-md-block">|</div>
+                      <li class="me-1 user-icon position-relative d-none d-md-block"><a href="#"><i class="fa-regular fa-user fs-5"></i></a>
+                        <ul class="user-submenu p-2 rounded">
                           <li><a href="#">Login</a></li>
                           <hr class="m-0">
                           <li><a href="#">Register</a></li>
@@ -65,11 +116,11 @@
 
           <div class="nav-bottom d-none d-lg-block"  > 
               <nav class="navbars-bottom" >                  
-                <div class="categories d-none d-lg-block d-flex flex-column justify-content-center align-items-start">
+                <div class="categories d-flex flex-column justify-content-center align-items-start">
           
                   <button class="cate-btn btn fw-normal" style="background-color: var(--theme-color);color: #fff;"><i class="fa-solid fa-bars me-2"></i>Categories</button>
                   
-                  <div class="cate-box shadow-lg">
+                  <div class="cate-box">
                     <ul class="categories-menu p-2">
                       <li class="cate-item"><a href="#">Products</a></li>
                       <li class="cate-item"><a href="#">Cosmetics</a></li>
@@ -82,32 +133,23 @@
                 <div class="nav-container">
                   <ul class="nav-menus mb-0 ps-0">
                     <li class="nav-items dropdown-menus">
-                      <a href="javascript:void(0);" class="nav-links">Home<i class="fa-solid fa-angle-down"></i></a>
-                        <ul class="submenu">
-                          <li  class="nav-items"><a href="#" class="nav-links">Shop</a></li>
-                          <li  class="nav-items"><a href="product_details.html" class="nav-links">Product Details</a></li>
-                          <li  class="nav-items"><a href="wishlist.html" class="nav-links">Wishlist</a></li>
-                          <li  class="nav-items"><a href="cart.html" class="nav-links">Cart</a></li>
-                          <li  class="nav-items"><a href="checkout.html" class="nav-links">Checkout</a></li>
-                        </ul>
+                      <a href="index.html" class="nav-links">Home</a>
                     </li>
                     <li class="nav-items">
                       <a href="#" class="nav-links">Shop</a>
                     </li>
                     <li class="nav-items dropdown-menus">
                       <a href="javascript:void(0);" class="nav-links">Pages<i class="fa-solid fa-angle-down"></i></a>
-                        <ul class="submenu">
-                          <li  class="nav-items"><a href="wishlist.html" class="nav-links">Wishlist</a></li>
-                          <li  class="nav-items"><a href="cart.html" class="nav-links">Cart</a></li>
-                          <li  class="nav-items"><a href="checkout.html" class="nav-links">Checkout</a></li>
-                        </ul>
-                   
+                      <ul class="submenu">
+                        <li  class="nav-items"><a href="cart.html" class="nav-links">Cart</a></li>
+                        <li  class="nav-items"><a href="wishlist.html" class="nav-links">Wishlist</a></li>
+                        <li  class="nav-items"><a href="product_details.html" class="nav-links">Product Details</a></li>
+                        <li  class="nav-items"><a href="checkout.html" class="nav-links">Checkout</a></li>
+                      </ul>
+                  
                     </li>
                     <li class="nav-items">
                       <a href="about_us.html" class="nav-links">About Us</a>
-                    </li>
-                    <li class="nav-items">
-                      <a href="#" class="nav-links">Blog</a>
                     </li>
                     <li class="nav-items">
                       <a href="contact_us.html" class="nav-links">Contact Us</a>
@@ -117,8 +159,8 @@
             
     
                 <div class="d-flex d-none d-lg-block">
-                  <div class=" d-flex justify-content-center align-items-center">
-                    <button class="btn border-0" style="font-size: 15px;"><i class="fa-solid fa-phone me-1" style="color: var(--theme-color);"></i><span style="font-weight: 500;">908. 408. 501. 89</span></button>
+                  <div class="">
+                    <button class="btn border-0 d-flex justify-content-center align-items-center" style="font-size: 15px;"><i class="bx bx-phone fs-5 me-1" style="color: var(--theme-color);"></i><span style="font-weight: 500;">908. 408. 501. 89</span></button>
                   </div>
                 </div>
               </nav>
@@ -140,6 +182,9 @@
                     <!-- <div class="menu-title">Your menu title</div> -->
                     <li class="item">
                       <a href="index.html">Home</a>
+                    </li>
+                    <li class="item">
+                      <a href="#">Shop</a>
                     </li>
                     <li class="">
                       <div class="submenu-item">
@@ -193,10 +238,10 @@
                       </ul>
                     </li>
                     <li class="item">
-                      <a href="#">About Us</a>
+                      <a href="about_us.html">About Us</a>
                     </li>
                     <li class="item">
-                      <a href="#">Contact Us</a>
+                      <a href="contact_us.html">Contact Us</a>
                     </li>
                     <li class="item">
                       <a href="#"><i class="fa-regular fa-user me-2 fs-6"></i>Login/Register</a>
@@ -207,10 +252,11 @@
 
             </div>
           <!-- mobile nav end here  -->   
-                       
+
       </div>
-    </header>
-    <!---------- header end here  ---------->
+  </header>
+
+  <!---------- header sections end here  ---------->
 
     <!--search modal start here  -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -411,7 +457,7 @@
     <!-- offcanvas end here  -->
 
     <!---- cart page banner start here  ---->
-    <section class="cart-banner mb-4 top-banner">
+    <section class="cart-banner mb-4">
         <div class="container-xl gx-4">
           <a href="index.html">Home</a>>&nbsp;<span class="text-muted">Contact Us</span></a>
         </div>
@@ -438,7 +484,7 @@
                             <div class="col-md-6 col-lg-12 col-xl-6 ">
                               <div class="p-2 rounded position-relative" style="background-color: #f4f4f4;">
                                   <div class="contact-icon d-flex justify-content-center align-items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ffffff;transform: ;msFilter:;"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"></path></svg>
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ffffff;"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"></path></svg>
                                   </div>
                                     <div class="contact-desc">
                                       <h5>Email Address</h5>
@@ -449,7 +495,7 @@
                             <div class="col-md-6 col-lg-12 col-xl-6">
                               <div class="p-2 rounded position-relative" style="background-color: #f4f4f4;">
                                 <div class="contact-icon d-flex justify-content-center align-items-center">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"></path></svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"></path></svg>
                                 </div>
                                 <div class="contact-desc">
                                   <h5>Phone</h5>
@@ -460,7 +506,7 @@
                             <div class="col-md-6 col-lg-12 col-xl-6">
                               <div class="p-2 rounded position-relative" style="background-color: #f4f4f4;">
                                 <div class="contact-icon d-flex justify-content-center align-items-center">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ffffff ;transform: ;msFilter:;"><path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path><path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path></svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ffffff;"><path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path><path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path></svg>
                                 </div>
                                 <div class="contact-desc">
                                   <h5>Office Address</h5>
@@ -471,7 +517,7 @@
                             <div class="col-md-6 col-lg-12 col-xl-6">
                               <div class="p-2 rounded position-relative" style="background-color: #f4f4f4;">
                                 <div class="contact-icon d-flex justify-content-center align-items-center">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ffffff ;transform: ;msFilter:;"><path d="M19 2H9c-1.103 0-2 .897-2 2v6H5c-1.103 0-2 .897-2 2v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2zM5 12h6v8H5v-8zm14 8h-6v-8c0-1.103-.897-2-2-2H9V4h10v16z"></path><path d="M11 6h2v2h-2zm4 0h2v2h-2zm0 4.031h2V12h-2zM15 14h2v2h-2zm-8 .001h2v2H7z"></path></svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ffffff;"><path d="M19 2H9c-1.103 0-2 .897-2 2v6H5c-1.103 0-2 .897-2 2v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2zM5 12h6v8H5v-8zm14 8h-6v-8c0-1.103-.897-2-2-2H9V4h10v16z"></path><path d="M11 6h2v2h-2zm4 0h2v2h-2zm0 4.031h2V12h-2zM15 14h2v2h-2zm-8 .001h2v2H7z"></path></svg>
                                 </div>
                                 <div class="contact-desc">
                                   <h5>Office Address</h5>
@@ -540,79 +586,78 @@
 
     <!--------- footer start here ------------>
     <section class="footer mt-4 ">
-        <div class="container-xl  ">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-4">
-            <div class="col mb-4 mb-sm-0">
-              <a href="index.html" class="footer-branding text-center text-sm-start fw-semibold" style="color: var(--theme-color);">EasyShop</a>
-              <p class="footer-desc">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> 
-  
-              <div>
-                <div class="footer-social ">
-                  <li class=""><a href="#"><img src="../frontend/images/social-icon/facebook.png" alt=""></a></li>
-                  <li class=""><a href="#"><img src="../frontend/images/social-icon/whatsapp.png" alt=""></a></li>
-                  <li class=""><a href="#"><img src="../frontend/images/social-icon/linkedin.png" alt=""></a></li>
-                  <li class=""><a href="#"><img src="../frontend/images/social-icon/youtube.png" alt=""></a></li>
-                  <!-- <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li> -->
-                </div>          
-              </div>
-  
+      <div class="container-xl  ">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-4">
+          <div class="col mb-4 mb-sm-0">
+            <a href="index.html" class="footer-branding text-center text-sm-start fw-semibold" style="color: var(--theme-color);">EasyShop</a>
+            <p class="footer-desc">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> 
+
+            <div>
+              <div class="footer-social">
+                <li class=""><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+                <li class=""><a href="#"><i class='bx bxl-whatsapp' ></i></a></li>
+                <li class=""><a href="#"><i class='bx bxl-linkedin' ></i></a></li>
+                <li class=""><a href="#"><i class='bx bxl-youtube' ></i></a></li>
+              </div>          
             </div>
-  
-            <div class="col mb-4 mb-sm-0">
-              <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Categories Links</h5>
-              <div class="footer-links d-flex flex-column text-start fw-medium">
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Home</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>About Me</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Research</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Blog</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Session</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Contact Me</a></p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Login</a> </p>
-              </div>
-            </div>
-            <div class="col mb-4 mb-sm-0">
-              <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Usefull Links</h5>
-              <div class="footer-links d-flex flex-column text-start fw-medium">
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Home</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>About Me</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Research</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Blog</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Session</a> </p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Contact Me</a></p>
-              <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Login</a> </p>
-              </div>
-            </div>
-            <div class="col mb-3 mb-sm-0">
-              <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Have a Questions?</h5>
-              <ul class="list-group footer-contact">
-                <li class=" d-flex align-items-baseline mb-3">
-                  
-                  <span class="me-3"><i class="fas fa-map-marked-alt"></i></span>
-                  <span class="footer-cont-desc" style="font-size:14px">203/ka, Green Road, Firmgate, Dhaka, Bangladesh</span>
-                  
-                </li>
-                <li class=" d-flex mb-3">
-                  
-                    <span class="me-3"><i class="fa-solid fa-phone"></i></span>
-                    <span class="footer-cont-desc" style="font-size:14px">+2 392 3929 210</span>
-                
-                </li>
-                <li class="d-flex  mb-3">
-                  <a href="mailto:info@yourdomain.com" target="_blank" class="text-dark "><span class="me-3"><i class="fa-solid fa-envelope"></i></span>
-                    <span class="footer-cont-desc" style="font-size:14px">info@yourdomain.com</span></a>
-                </li>
-              </ul>
-            </div>
-  
+
           </div>
+
+          <div class="col mb-4 mb-sm-0">
+            <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Categories Links</h5>
+            <div class="footer-links d-flex flex-column text-start fw-medium">
+            <p><a href="index.html"><i class="fa-solid fa-arrow-right me-2"></i>Home</a> </p>
+            <p><a href="about_us.html"><i class="fa-solid fa-arrow-right me-2"></i>About US</a> </p>
+            <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Blog</a> </p>
+            <p><a href="contact_us.html"><i class="fa-solid fa-arrow-right me-2"></i>Contact US</a></p>
+            <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Login</a> </p>
+            </div>
+          </div>
+          <div class="col mb-4 mb-sm-0">
+            <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Usefull Links</h5>
+            <div class="footer-links d-flex flex-column text-start fw-medium">
+            <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Wishlist</a> </p>
+            <p><a href="cart.html"><i class="fa-solid fa-arrow-right me-2"></i>Cart</a> </p>
+            <p><a href="shop.html"><i class="fa-solid fa-arrow-right me-2"></i>Shop</a> </p>
+            <p><a href="product_details.html"><i class="fa-solid fa-arrow-right me-2"></i>Product Details</a> </p>
+            <p><a href="checkout.html"><i class="fa-solid fa-arrow-right me-2"></i>Checkout</a></p>
+            </div>
+          </div>
+          <div class="col mb-3 mb-sm-0">
+            <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Have a Questions?</h5>
+            <ul class="list-group footer-contact">
+              <li class=" d-flex align-items-baseline mb-3">
+                
+                <span class="me-3"><i class="fas fa-map-marked-alt"></i></span>
+                <span class="footer-cont-desc" style="font-size:14px">203/ka, Green Road, Firmgate, Dhaka, Bangladesh</span>
+                
+              </li>
+              <li class=" d-flex mb-3">
+                
+                  <span class="me-3"><i class="fa-solid fa-phone"></i></span>
+                  <span class="footer-cont-desc" style="font-size:14px">+2 392 3929 210</span>
+              
+              </li>
+              <li class="d-flex  mb-3">
+                <a href="mailto:info@yourdomain.com" target="_blank" class="text-dark "><span class="me-3"><i class="fa-solid fa-envelope"></i></span>
+                  <span class="footer-cont-desc" style="font-size:14px">info@yourdomain.com</span></a>
+              </li>
+            </ul>
+          </div>
+
         </div>
-        <div class="text-center border border-start-0  border-end-0" style="background-color: #DFE0E3;">
-          <p class="my-auto p-3">Copyright ©2023 All Rights Reserved by EasyShop.</p>
-        </div>
-      </section>
+      </div>
+      <div class="text-center border border-start-0  border-end-0" style="background-color: #DFE0E3;">
+        <p class="my-auto p-3">Copyright ©2023 All Rights Reserved by EasyShop.</p>
+      </div>
+    </section>
     <!------------ footer end here ----------->
+
+      <!-- bottom to top scoll button  -->
+      <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+
 
      <!-- lottie file link  -->
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 

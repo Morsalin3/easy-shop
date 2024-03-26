@@ -17,35 +17,6 @@
     font-family: 'Poppins', sans-serif;
   }
 
- /* a{
-  text-decoration: none;
- }
- p{
-  font-size: 14px;
-
- }  */
-  
- /* cart banner start here  */
-
-.cart-banner{
-    background-image: url('/images/banner/cart-banner.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    padding: 60px 0;
-}
-.cart-banner a{
-    color: var(--text-primary-color);
-    font-size: 16px;
-    font-weight: 500;
-    padding: 0 10px 0 0;
-}
-.cart-banner a span{
-    color: var(--text-secondary-color);
-    font-size: 14px;
-    font-weight: normal;
-}
- /* cart banner end here  */
 
  /* cart table section start here  */
  .cart-thumbnail{
