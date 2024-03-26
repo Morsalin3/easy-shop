@@ -823,7 +823,7 @@
   }
   .item a:hover,
   .submenu-item:hover,
-  .test-submenu .menu-title:hover {
+  .submenu-box .menu-title:hover {
     background: rgba(255, 255, 255, 0.1);
     color: var(--theme-color);
     transition: all .3s ease-in-out;
@@ -836,7 +836,7 @@
     color: #fff;
     cursor: pointer;
   }
-  .test-submenu {
+  .submenu-box {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -846,15 +846,15 @@
     background: #11101d;
     display: none;
   }
-  .show-submenu ~ .test-submenu {
+  .show-submenu ~ .submenu-box {
     display: block;
   }
-  .test-submenu .menu-title {
+  .submenu-box .menu-title {
     border-radius: 12px;
     cursor: pointer;
     border-left: 2px solid #000;
   }
-  .test-submenu .menu-title i {
+  .submenu-box .menu-title i {
     margin-right: 10px;
   }
  
@@ -1038,7 +1038,7 @@
 }
 .item a:hover,
 .submenu-item:hover,
-.test-submenu .menu-title:hover {
+.submenu-box .menu-title:hover {
   background: rgba(255, 255, 255, 0.1);
   color: var(--theme-color);
   transition: all .3s ease-in-out;
@@ -1051,7 +1051,7 @@
   color: #fff;
   cursor: pointer;
 }
-.test-submenu {
+.submenu-box {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1061,15 +1061,15 @@
   background: #11101d;
   display: none;
 }
-.show-submenu ~ .test-submenu {
+.show-submenu ~ .submenu-box {
   display: block;
 }
-.test-submenu .menu-title {
+.submenu-box .menu-title {
   border-radius: 12px;
   cursor: pointer;
   border-left: 2px solid #000;
 }
-.test-submenu .menu-title i {
+.submenu-box .menu-title i {
   margin-right: 10px;
 }
 
@@ -1209,7 +1209,7 @@
 }
 .item a:hover,
 .submenu-item:hover,
-.test-submenu .menu-title:hover {
+.submenu-box .menu-title:hover {
   background: rgba(255, 255, 255, 0.1);
   color: var(--theme-color);
   transition: all .3s ease-in-out;
@@ -1222,7 +1222,7 @@
   color: #fff;
   cursor: pointer;
 }
-.test-submenu {
+.submenu-box {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1232,15 +1232,15 @@
   background: #11101d;
   display: none;
 }
-.show-submenu ~ .test-submenu {
+.show-submenu ~ .submenu-box {
   display: block;
 }
-.test-submenu .menu-title {
+.submenu-box .menu-title {
   border-radius: 12px;
   cursor: pointer;
   border-left: 2px solid #000;
 }
-.test-submenu .menu-title i {
+.submenu-box .menu-title i {
   margin-right: 10px;
 }
 
