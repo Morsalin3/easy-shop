@@ -291,9 +291,80 @@
 
 
    /*-------------- slider start here---------- */
-   .carousel-item img{
+   .slider-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: auto;
+   }
+   .slider-left{
+    width: 70%;
+    height: 100%;
+   }
+   .carousel{
+    width: 100%;
+    height: 100%;
+   }
+   .carousel-inner{
+    width: 100%;
+    height: 100%;
+   }
+   .carousel-item{
+    width: 100%;
     height: 400px;
    }
+   .carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
+   .slider-right{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+   }
+   .banner-right-top{
+    width: 100%;
+    height: 190px;
+   }
+   .banner-right-top img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* aspect-ratio: 2/1; */
+   }
+   .banner-right-bottom{
+    width: 100%;
+    height: 190px;
+   }
+   .banner-right-bottom img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* aspect-ratio: 2/1; */
+   }
+   .banner-right-top, 
+   .banner-right-bottom {
+    position: relative;
+    color: #000;
+
+   }
+   .banner-right-top h5, 
+   .banner-right-bottom h5 {
+    position: absolute;
+    left: 5%;
+    top:15%;
+    font-weight: 600;
+    line-height: 30px;
+
+   }
+
    .carousel-caption {
     padding: 10px 0;
     text-align: start;
@@ -310,6 +381,7 @@
     font-weight: bold;
     color: var(--text-primary-color);
     transition: all ease .5s;
+    border: 0;
     & i{
       font-size: 10px;
     }
@@ -318,10 +390,11 @@
     background-color: var(--theme-color);
     color: #ffffff;
   }
-
-   .banner-top img, .banner-bottom img{
-    height: 200px;
-   }
+  .btn.active{
+    background-color: var(--theme-color);
+    color: #ffffff
+  }
+ 
    /*-------------- slider end here------------ */
 
     
@@ -459,7 +532,6 @@
     }
     .popular-product-box{
       width: 100%;
-      /* height: 300px; */
       border-radius: 5px;
       overflow: hidden;
       display: flex;
@@ -469,7 +541,6 @@
     }
     .popular-product-box img{
       width: 100%;
-      /* height: 100%; */
       border-radius: 5px;
       transition: all 1.5s ease;
       aspect-ratio: 1;
@@ -886,11 +957,38 @@
 
    /*---------- navbar main end here -------------- */
  
-  /* banner/slider section start here  */
-  .top-banner{
-    margin-top: 70px;
+  /*-------- banner/slider section start here  ---------*/
+  .slider-container{
+    flex-direction: column;
    }
+
+   .slider-left{
+    width: 100%;
+    height: 100%;
+   }
+   .carousel-item{
+    width: 100%;
+    height: 200px;
+   }
+
+   .slider-right{
+    width: 100%;
+    flex-direction: column;
+   }
+   .banner-right-top, .banner-right-bottom{
+    width: 100%;
+    height: 200px;
+   }
+
+   .banner-right-top h5, 
+   .banner-right-bottom h5 {
+    font-size: 16px;
+    font-weight: 600;
+   }
+ 
   .carousel-caption {
+    top: 40%;
+    transform: translateY(-40%);
    & p{
     margin-bottom: 5px;
     font-size: 12px;
@@ -907,27 +1005,22 @@
       font-size: 10px;
     }
    }
-  .carousel-item img{
-    height: 300px;
-   }
-  .banner-right{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+
+  /*---------- banner/slider section end here  ---------*/
+
+  /*-------- popular product start here ------ */
+  .popular-product-box img{
+    aspect-ratio: 4/3;
+
   }
-  .banner-top img, .banner-bottom img{
-    height:319px;
-  }
-  /* banner/slider section end here  */
+  /*-------- popular product end here ------ */
+
 
 /*------ this section only for shop page ------*/
   .products-search-header::after{
     width: 220px;
- 
     }
-     /*------ this section only for shop page ------*/
+/*------ this section only for shop page ------*/
 
 /* ------------footer start here --------- */
 
@@ -953,9 +1046,6 @@
   /*------- nabvar top end here -------- */
 
 /*------ navbar bottom start here ---------- */
-/* .navbars-bottom{
-  height: 0px;
-} */
 
 .mob-nav-container {
   position: fixed;
@@ -1100,20 +1190,28 @@
     /*---------- navbar end here  ------------*/
 
   /* banner/slider section start here  */
-  .top-banner{
-    margin-top: 70px;
-   }
-  .banner-right{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-  }
-  .banner-top img, .banner-bottom img{
-    height: 214px;
-  }
-  /* banner/slider section end here  */
 
+  .slider-container{
+    flex-direction: column;
+   }
+
+   .slider-left{
+    width: 100%;
+    height: 100%;
+   }
+   .carousel-item{
+    width: 100%;
+    height: 300px;
+   }
+
+   .slider-right{
+    width: 100%;
+    flex-direction: row-reverse;
+   }
+   .banner-right-top, .banner-right-bottom{
+    width: 100%;
+    height: 200px;
+   }
 
 }
 
@@ -1270,8 +1368,36 @@
   /*---------- navbar end here --------------- */
 
    /*---- banner/slider section start here ----------- */
+   .slider-container{
+    flex-direction: column;
+   }
 
-   .top-banner{
+   .slider-left{
+    width: 100%;
+    height: 100%;
+   }
+   .carousel-item{
+    width: 100%;
+    height: 350px;
+   }
+
+   .slider-right{
+    width: 100%;
+    flex-direction: row-reverse;
+   }
+   .banner-right-top, .banner-right-bottom{
+    width: 100%;
+    height: 200px;
+   }
+
+   .banner-right-top img, .banner-right-bottom img{
+    /* width: 100%;
+    object-fit: cover; */
+    /* aspect-ratio: 2/1; */
+   }
+
+
+   /* .top-banner{
     margin-top: 70px;
    }
 
@@ -1281,9 +1407,9 @@
     align-items: center;
     gap: 30px;
   }
-  .banner-top img, .banner-bottom img{
+  .banner-right-top img, .banner-right-bottom img{
     height: 279px;
-   }
+   } */
 
   /* banner/slider section end here  */
    

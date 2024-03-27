@@ -19,7 +19,7 @@
       
   <!-- scroll navbar start here  -->
   <header class="bg-white shadow-sm scroll-nav fixed-top">
-    <div class="container-xl gx-4">
+    <div class="container gx-4">
         <div class="nav-top">
             <nav class="navbars-top row">
                 <div class="col-3 d-flex justify-content-start gap-3 align-items-center">
@@ -69,8 +69,8 @@
   </header>
   <!-- scroll navbar end here  -->
 
-  <header class="bg-white shadow-sm">
-      <div class="container-xl gx-4">
+  <header class="">
+      <div class="container gx-4">
           <div class="nav-top">
               <nav class="navbars-top row">
                   <div class="col-3 d-flex justify-content-start gap-3 align-items-center">
@@ -461,7 +461,7 @@
 
   <!---- product details page banner start here  ---->
   <section class="cart-banner mb-4">
-    <div class="container-xl gx-4">
+    <div class="container gx-4">
         <a href="index.html">Home</a>>&nbsp;<span class="text-muted">Product Details</span></a>
       </div>
   </section>
@@ -475,55 +475,53 @@
           <div class="row"> 
             <div class="col-md-6">
               <div>
-                <!-- <img src="images/product/product-3.jpg" class="w-100" alt=""> -->
                  <!-- Swiper -->
-
-              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="images/product/product-1.jpg" />
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper mySwiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/product/product-1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product/product-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product/product-3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product/product-4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product/product-5.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product/banner1.jpg" width="150" height="150" />
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <img src="images/product/product-2.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/product/product-3.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/product/product-4.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/product/product-5.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/product/banner1.jpg" width="150" height="150" />
+                  <div class="swiper-button-next top-slide-next"></div>
+                  <div class="swiper-button-prev top-slide-prev"></div>
+                </div>
+                <div thumbsSlider="" class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/product/product-1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product/product-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product/product-3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product/product-4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product/product-5.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/product/banner1.jpg" />
+                    </div>
                   </div>
                 </div>
-                <div class="swiper-button-next top-slide-next"></div>
-                <div class="swiper-button-prev top-slide-prev"></div>
-              </div>
-              <div thumbsSlider="" class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="images/product/product-1.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/product/product-2.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/product/product-3.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/product/product-4.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/product/product-5.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/product/banner1.jpg" />
-                  </div>
-                </div>
-              </div>
               </div>
             </div>
             <!-- product info start here  -->
@@ -550,6 +548,27 @@
                   Our nachos can be enjoyed by themselves or paired with various dips, salsas, or cheese for added flavour.
                 </p>
               </div>
+              <form>
+                <div class="size-select mb-3">
+                  <p>Size:</p>
+                  <label for="small">
+                    <input type="radio" name="size" id="small">
+                    <span>S</span>
+                  </label>
+                  <label for="medium">
+                    <input type="radio" name="size" id="medium">
+                    <span>M</span>
+                  </label>
+                  <label for="large">
+                    <input type="radio" name="size" id="large">
+                    <span>L</span>
+                  </label>
+                  <label for="x-large">
+                    <input type="radio" name="size" id="x-large">
+                    <span>XL</span>
+                  </label>
+                </div>
+              </form>
               <div class="color-price mb-3">
                 <div class="color-option">
                   <span class="color">Colour:</span>
@@ -560,29 +579,17 @@
                   </div>
                 </div>
               </div>
-              <script>
-                let circle = document.querySelector(".color-option");
-                circle.addEventListener("click", (e)=>{
-                  let target = e.target;
-                  if(target.classList.contains("circle")){
-                    circle.querySelector(".active").classList.remove("active");
-                    target.classList.add("active");
-                    // document.querySelector(".main-images .active").classList.remove("active");
-                    // document.querySelector(`.main-images .${target.id}`).classList.add("active");
-                  }
-                });
-               </script>
              <div class="d-flex justify-content-start gap-5">
               <div class="input-box rounded d-flex justify-content-between align-items-center border">
                 <button class="offc-minus-btn border-0 fw-bold">-</button>
                 <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
                 <button class="offc-plus-btn  border-0 fw-bold">+</button>
               </div>
-              <button class="d-flex justify-content-center align-items-center rounded-circle border" style="width: 40px; height: 40px;"><i class="fa-regular fa-heart fs-5"></i></button>
+              <a href="#" class="d-flex justify-content-center align-items-center rounded-circle border text-black" style="width: 40px; height: 40px;"><i class="fa-regular fa-heart fs-5"></i></a>
              </div>
              <div class="mb-3">
-              <button class="btn py-2 mt-3 text-white text-sm fw-semibold me-3" style="background-color: var(--theme-color);"><span><i class="fa-solid fa-cart-plus me-2"></i></span>Add To Cart</button>
-              <button class="btn py-2 mt-3 text-white text-sm bg-black fw-semibold">Buy Now</button>
+              <a class="btn py-2 mt-3 text-white text-sm fw-semibold me-3" style="background-color: var(--theme-color);"><span><i class="fa-solid fa-cart-plus me-2"></i></span>Add To Cart</a>
+              <a class="btn py-2 mt-3 text-white text-sm bg-black fw-semibold">Buy Now</a>
              </div>
                <div class="mb-3">
                 <h6 style="color: var(--text-primary-color);">Product Information</h6>
@@ -701,18 +708,18 @@
             <ul class="list-group footer-contact">
               <li class=" d-flex align-items-baseline mb-3">
                 
-                <span class="me-3"><i class="fas fa-map-marked-alt"></i></span>
+                <span class="me-3"><i class='bx bx-map fs-5' ></i></span>
                 <span class="footer-cont-desc" style="font-size:14px">203/ka, Green Road, Firmgate, Dhaka, Bangladesh</span>
                 
               </li>
               <li class=" d-flex mb-3">
                 
-                  <span class="me-3"><i class="fa-solid fa-phone"></i></span>
+                  <span class="me-3"><i class='bx bx-phone fs-5'></i></span>
                   <span class="footer-cont-desc" style="font-size:14px">+2 392 3929 210</span>
               
               </li>
               <li class="d-flex  mb-3">
-                <a href="mailto:info@yourdomain.com" target="_blank" class="text-dark "><span class="me-3"><i class="fa-solid fa-envelope"></i></span>
+                <a href="mailto:info@yourdomain.com" target="_blank" class="text-dark "><span class="me-3"><i class='bx bx-envelope fs-5' ></i></span>
                   <span class="footer-cont-desc" style="font-size:14px">info@yourdomain.com</span></a>
               </li>
             </ul>
