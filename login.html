@@ -9,6 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="login.css">
     
 </head>
 <body>
@@ -478,19 +479,30 @@
                 </div>
             </div>
             <div class="col">
-                <form>
-                    <div class="row row-cols-1 rounded py-4 px-4" style="background-color: #f4f4f4">
+                <form class="login-auth">
+                    <div class="row row-cols-1 rounded py-5 px-5" style="background-color: #f4f4f4">
+                        <div class="col-12 mb-4" >
+                          <div class="d-flex align-items-start gap-3 ">
+                            <div class="p-3 bg-white rounded">
+                              <i class='bx bx-lock-alt fs-4' style="color: var(--theme-color);"></i>
+                            </div>
+                            <div>
+                              <h5>Login to your account</h5>
+                              <p class="m-0" style="font-size: 13px;">Your personal data will be used to support your experience throughout this website, to manage access to your account.</p>
+                             </div>
+                          </div>
+                        </div>
                         <div class="col-12 mb-4" >
                             <label for="forEmail" class="form-label text-black text-medium">Email</label>
                             <div class="input-group">
-                                <span class="input-group-text" id="basic-addon1"><i class='bx bx-user-circle'></i></span>
+                                <span class="input-group-text" id="basic-addon1"><i class='bx bx-envelope fs-5'></i></span>
                                 <input type="email" class="form-control form-control-lg text-muted" id="forEmail" placeholder="Email Address" required aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="col-12 mb-4">
                             <label for="forPassword" class="form-label text-black text-medium">Password</label>
                             <div class="input-group">
-                            <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-hand-point-right"></i></span>
+                            <span class="input-group-text" id="basic-addon1"><i class="bx bx-lock-alt fs-5"></i></span>
                             <input type="text" class="form-control form-control-lg" id="forPassword" placeholder="Password" required aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>
@@ -503,11 +515,21 @@
                             </div>
                         </div>  
                         <div class="col mb-4">
-                            <button class="btn text-white fw-medium w-100 py-3 mb-3 d-flex justify-content-center align-items-center" type="submit" style="background-color: var(--theme-color);">Login<i class="fa-solid fa-arrow-right-long ms-1"></i></button>
-                            <p class="text-center">Don't have an account? <a href="register.html" class="text-dark text-decoration-underline">Register now</a></p>
-                        </div>   
-                        <div class="col mb-4">
-                            <p class="">Login with social networks</p>            
+                            <button class="btn text-white fw-medium w-100 py-3 mb-3 d-flex justify-content-center align-items-center" type="submit" style="background-color: var(--theme-color);font-size: 13px;">Login<i class="fa-solid fa-arrow-right-long ms-1"></i></button>
+                            <p class="text-center mb-4" style="font-size: 13px;">Don't have an account? <a href="register.html" class="text-dark text-decoration-underline">Register now</a></p>
+                            <hr class="m-0">   
+                        </div>
+                        <div class="col mb-2">
+                          <div class="position-relative py-3">
+                            <div class="login-social-title">
+                              <p class="">Login with social networks</p>    
+                            </div> 
+                          </div>  
+                          <div class="login-social py-4 d-flex justify-content-center align-items-center">
+                            <a href="#" class="position-relative d-block">
+                              <img src="images/svg-icon/google.svg" alt="">
+                            </a>
+                          </div>
                         </div>   
                     </div>
                 </form>
