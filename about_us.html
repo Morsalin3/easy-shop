@@ -69,192 +69,213 @@
   <!-- scroll navbar end here  -->
 
   <header class="">
-      <div class="container gx-4">
-          <div class="nav-top">
-              <nav class="navbars-top row">
-                  <div class="col-3 d-flex justify-content-start gap-3 align-items-center">
-                    <span class="nav-burger d-block d-lg-none"><i class="fa-solid fa-bars"></i></span>
-                    <a href="index.html" class="nav-branding d-none d-md-block" style="color: var(--theme-color);">EasyShop</a>
+    <div class="container gx-4">
+        <div class="nav-top">
+            <nav class="navbars-top row">
+                <div class="col-3 d-flex justify-content-start gap-3 align-items-center">
+                  <span class="nav-burger d-block d-lg-none"><i class="fa-solid fa-bars"></i></span>
+                  <a href="index.html" class="nav-branding d-none d-md-block" style="color: var(--theme-color);">EasyShop</a>
+                
+                </div>
                   
+                <div class="col-6 p-0 search-sec d-flex justify-content-center justify-content-md-between align-items-center rounded-1">
+                  <div class="select-cont d-none d-md-block">
+                    <select class="select-box px-2 px-lg-4 py-2" name="categories" id="" style="background-color: #f3f4f7;">
+                      <option value="">All Categories</option>
+                      <option value="0">Sunglasses</option>
+                      <option value="1">Bags & Purses</option>
+                      <option value="2">Silk Accessories</option>
+                      <option value="3">Cosmetics</option>
+                      <option value="4">Handy Cream</option>
+                      <option value="5">Plastics Gift</option>
+                      <option value="6">Gift Sets</option>
+                    </select>
                   </div>
-                    
-                  <div class="col-6 p-0 search-sec d-flex justify-content-center justify-content-md-between align-items-center rounded-1">
-                    <div class="select-cont d-none d-md-block">
-                      <select class="select-box px-2 px-lg-4 py-2" name="categories" id="" style="background-color: #f3f4f7;">
-                        <option value="">All Categories</option>
-                        <option value="0">Sunglasses</option>
-                        <option value="1">Bags & Purses</option>
-                        <option value="2">Silk Accessories</option>
-                        <option value="3">Cosmetics</option>
-                        <option value="4">Handy Cream</option>
-                        <option value="5">Plastics Gift</option>
-                        <option value="6">Gift Sets</option>
-                      </select>
-                    </div>
-                    <input class="border-0 py-2 px-4 w-100 d-none d-md-block" type="text" name="name" for="button-addon2" placeholder="I' am searching for" ria-label="I' am searching for" aria-describedby="button-addon2"style="background-color: #f3f4f7;">
-                    <button class="btn text-white rounded-0 rounded-end-1 py-2 d-none d-md-block" id="button-addon2" type="submit"style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <a href="index.html" class="nav-branding d-block d-md-none" style="color: var(--theme-color);">EasyShop</a>
-                  </div>
-
-                  <div class="col-3 nav-top-right">
-                    <ul class="d-flex justify-content-end align-content-center list-unstyled mb-0">
-                      <li class="d-none d-md-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><a href="#"><i class="fa-solid fa-cart-plus fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
-                      <div class="divider d-none d-md-block">|</div>
-                      <li class="d-none d-md-block"><a href="#"><i class="fa-regular fa-heart fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
-                      <div class="divide d-none d-md-block">|</div>
-                      <li class="me-1 user-icon position-relative d-none d-md-block"><a href="#"><i class="fa-regular fa-user fs-5"></i></a>
-                        <ul class="user-submenu p-2 rounded">
-                          <li><a href="#">Login</a></li>
-                          <hr class="m-0">
-                          <li><a href="#">Register</a></li>
-                        </ul>
-                      </li>
-                      <button class="btn btn-sm text-white d-block d-md-none" id="search-field" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </ul>
-                    </div>              
-              </nav>
-          </div>
-
-          <div class="nav-bottom d-none d-lg-block"  > 
-              <nav class="navbars-bottom" >                  
-                <div class="categories d-flex flex-column justify-content-center align-items-start">
-          
-                  <button class="cate-btn btn fw-normal" style="background-color: var(--theme-color);color: #fff;"><i class="fa-solid fa-bars me-2"></i>Categories</button>
-                  
-                  <div class="cate-box">
-                    <ul class="categories-menu p-2">
-                      <li class="cate-item"><a href="#">Products</a></li>
-                      <li class="cate-item"><a href="#">Cosmetics</a></li>
-                      <li class="cate-item"><a href="#">Gift Shop</a></li>
-                      <li class="cate-item"><a href="#">Plastics Gift</a></li>
-                    </ul>
-                  </div>
+                  <input class="border-0 py-2 px-4 w-100 d-none d-md-block" type="text" name="name" for="button-addon2" placeholder="I' am searching for" ria-label="I' am searching for" aria-describedby="button-addon2"style="background-color: #f3f4f7;">
+                  <button class="btn text-white rounded-0 rounded-end-1 py-2 d-none d-md-block" id="button-addon2" type="submit"style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  <a href="index.html" class="nav-branding d-block d-md-none" style="color: var(--theme-color);">EasyShop</a>
                 </div>
 
-                <div class="nav-container">
-                  <ul class="nav-menus mb-0 ps-0">
-                    <li class="nav-items dropdown-menus">
-                      <a href="index.html" class="nav-links">Home</a>
-                    </li>
-                    <li class="nav-items">
-                      <a href="#" class="nav-links">Shop</a>
-                    </li>
-                    <li class="nav-items dropdown-menus">
-                      <a href="javascript:void(0);" class="nav-links">Pages<i class="fa-solid fa-angle-down"></i></a>
-                      <ul class="submenu">
-                        <li  class="nav-items"><a href="cart.html" class="nav-links">Cart</a></li>
-                        <li  class="nav-items"><a href="wishlist.html" class="nav-links">Wishlist</a></li>
-                        <li  class="nav-items"><a href="product_details.html" class="nav-links">Product Details</a></li>
-                        <li  class="nav-items"><a href="checkout.html" class="nav-links">Checkout</a></li>
+                <div class="col-3 nav-top-right">
+                  <ul class="d-flex justify-content-end align-content-center list-unstyled mb-0">
+                    <li class="d-none d-md-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><a href="#"><i class="fa-solid fa-cart-plus fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                    <div class="divider d-none d-md-block">|</div>
+                    <li class="d-none d-md-block"><a href="#"><i class="fa-regular fa-heart fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                    <div class="divide d-none d-md-block">|</div>
+                    <li class="me-1 user-icon position-relative d-none d-md-block"><a href="#"><i class="fa-regular fa-user fs-5"></i></a>
+                      <ul class="user-submenu p-2 rounded">
+                        <li><a href="login.html">Login</a></li>
+                        <hr class="m-0">
+                        <li><a href="register.html">Register</a></li>
                       </ul>
-                  
                     </li>
-                    <li class="nav-items">
-                      <a href="about_us.html" class="nav-links">About Us</a>
-                    </li>
-                    <li class="nav-items">
-                      <a href="contact_us.html" class="nav-links">Contact Us</a>
-                    </li>                    
+                    <button class="btn btn-sm text-white d-block d-md-none" id="search-field" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
                   </ul>
-                </div>
-            
-    
-                <div class="d-flex d-none d-lg-block">
-                  <div class="">
-                    <button class="btn border-0 d-flex justify-content-center align-items-center" style="font-size: 15px;"><i class="bx bx-phone fs-5 me-1" style="color: var(--theme-color);"></i><span style="font-weight: 500;">908. 408. 501. 89</span></button>
-                  </div>
-                </div>
-              </nav>
-          </div>
+                  </div>              
+            </nav>
+        </div>
 
-          <!-- mobile nav start here  -->
-            <div class="mob-nav-container d-block d-lg-none">
-              <div class="remove">
-                <!-- <p class="m-0 py-1 fs-5">Menu</p> -->
-                <p class="m-0 py-1 fs-5">x</p>
+        <div class="nav-bottom d-none d-lg-block"  > 
+            <nav class="navbars-bottom" >                  
+              <div class="categories position-relative d-flex flex-column justify-content-center align-items-start">
+        
+                <button class="cate-btn btn fw-normal" style="background-color: var(--theme-color);color: #fff;"><i class="fa-solid fa-bars me-2"></i>Categories</button>
+                
+                <div class="cate-box">
+                  <ul class="categories-menu p-2">
+                    <li class="cate-item"><a href="#">Products</a></li>
+                    <li class="cate-item"><a href="#">Cosmetics</a>
+                    <li>
+                      <label for="btn-1" class="categories-submenu">Features
+                        <span class="fas fa-caret-down"></span>
+                      </label>
+                      <input type="checkbox" id="btn-1">
+                      <ul>
+                          <li class="cate-item"><a href="#">Pages1</a></li>
+                          <li class="cate-item"><a href="#">Pages2</a></li>
+                      </ul>
+                    </li>
+                    </li>
+                    <li class="cate-item"><a href="#">Gift Shop</a></li>
+                    <li>
+                      <label for="btn-2" class="categories-submenu">Features
+                        <span class="fas fa-caret-down"></span>
+                      </label>
+                      <input type="checkbox" id="btn-2">
+                      <ul>
+                          <li class="cate-item"><a href="#">Pages</a></li>
+                          <li class="cate-item"><a href="#">Pages2</a></li>
+                      </ul>
+                    </li>
+                    <li class="cate-item"><a href="#">Plastics Gift</a></li>
+                  </ul>
+                </div>                 
               </div>
 
-              <nav class="sidebar">
-                <div class="d-flex">
-                  <a href="index.html" class="logo text-center m-auto">EasyShop</a>
+              <div class="nav-container">
+                <ul class="nav-menus mb-0 ps-0">
+                  <li class="nav-items dropdown-menus">
+                    <a href="index.html" class="nav-links">Home</a>
+                  </li>
+                  <li class="nav-items">
+                    <a href="shop.html" class="nav-links">Shop</a>
+                  </li>
+                  <li class="nav-items dropdown-menus">
+                    <a href="javascript:void(0);" class="nav-links">Pages<i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="submenu">
+                      <li  class="nav-items"><a href="cart.html" class="nav-links">Cart</a></li>
+                      <li  class="nav-items"><a href="wishlist.html" class="nav-links">Wishlist</a></li>
+                      <li  class="nav-items"><a href="product_details.html" class="nav-links">Product Details</a></li>
+                      <li  class="nav-items"><a href="checkout.html" class="nav-links">Checkout</a></li>
+                    </ul>
+                 
+                  </li>
+                  <li class="nav-items">
+                    <a href="about_us.html" class="nav-links">About Us</a>
+                  </li>
+                  <li class="nav-items">
+                    <a href="contact_us.html" class="nav-links">Contact Us</a>
+                  </li>                    
+                </ul>
+              </div>
+          
+  
+              <div class="d-flex d-none d-lg-block">
+                <div class="">
+                  <button class="btn border-0 d-flex justify-content-center align-items-center" style="font-size: 15px;"><i class="bx bx-phone fs-5 me-1" style="color: var(--theme-color);"></i><span style="font-weight: 500;">908. 408. 501. 89</span></button>
                 </div>
-                <div class="menu-content">
-                  <ul class="menu-items p-0">
-                    <!-- <div class="menu-title">Your menu title</div> -->
-                    <li class="item">
-                      <a href="index.html">Home</a>
-                    </li>
-                    <li class="item">
-                      <a href="#">Shop</a>
-                    </li>
-                    <li class="">
-                      <div class="submenu-item">
-                        <span>Pages</span>
-                        <i class="fa-solid fa-chevron-right"></i>
-                      </div>
-                      <ul class="menu-items submenu-box">
-                        <div class="menu-title">
-                          <i class="fa-solid fa-chevron-left"></i>
-                          Back
-                        </div>
-                        <li class="item">
-                          <a href="cart.html">Cart</a>
-                        </li>
-                        <li class="item">
-                          <a href="product_details.html">Product Details</a>
-                        </li>
-                        <li class="item">
-                          <a href="checkout.html">Checkout</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="">
-                      <div class="submenu-item">
-                        <span>Shop</span>
-                        <i class="fa-solid fa-chevron-right"></i>
-                      </div>
-                      <ul class="menu-items submenu-box">
-                        <div class="menu-title">
-                          <i class="fa-solid fa-chevron-left"></i>
-                          Back
-                        </div>
-                        <li class="item">
-                          <a href="#">Second sublink</a>
-                        </li>
-                        <li class="item">
-                          <a href="#">Second sublink</a>
-                        </li>
-                        <li class="item">
-                          <a href="#">Second sublink</a>
-                        </li>
-                        <li class="item">
-                          <a href="#">Second sublink</a>
-                        </li>
-                        <li class="item">
-                          <a href="#">Second sublink</a>
-                        </li>
-                        <li class="item">
-                          <a href="#">Last sublink</a>
-                        </li>          
-                      </ul>
-                    </li>
-                    <li class="item">
-                      <a href="about_us.html">About Us</a>
-                    </li>
-                    <li class="item">
-                      <a href="contact_us.html">Contact Us</a>
-                    </li>
-                    <li class="item">
-                      <a href="#"><i class="fa-regular fa-user me-2 fs-6"></i>Login/Register</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+              </div>
+            </nav>
+        </div>
 
+        <!-- mobile nav start here  -->
+          <div class="mob-nav-container d-block d-lg-none">
+            <div class="remove">
+              <!-- <p class="m-0 py-1 fs-5">Menu</p> -->
+              <p class="m-0 py-1 fs-5">x</p>
             </div>
-          <!-- mobile nav end here  -->   
 
-      </div>
+            <nav class="sidebar">
+              <div class="d-flex">
+                <a href="index.html" class="logo text-center m-auto">EasyShop</a>
+              </div>
+              <div class="menu-content">
+                <ul class="menu-items p-0">
+                  <!-- <div class="menu-title">Your menu title</div> -->
+                  <li class="item">
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li class="item">
+                    <a href="shop.html">Shop</a>
+                  </li>
+                  <li class="">
+                    <div class="submenu-item">
+                      <span>Pages</span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <ul class="menu-items submenu-box">
+                      <div class="menu-title">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Back
+                      </div>
+                      <li class="item">
+                        <a href="cart.html">Cart</a>
+                      </li>
+                      <li class="item">
+                        <a href="product_details.html">Product Details</a>
+                      </li>
+                      <li class="item">
+                        <a href="checkout.html">Checkout</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="">
+                    <div class="submenu-item">
+                      <span>Shop</span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <ul class="menu-items submenu-box">
+                      <div class="menu-title">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Back
+                      </div>
+                      <li class="item">
+                        <a href="#">Second sublink</a>
+                      </li>
+                      <li class="item">
+                        <a href="#">Second sublink</a>
+                      </li>
+                      <li class="item">
+                        <a href="#">Second sublink</a>
+                      </li>
+                      <li class="item">
+                        <a href="#">Second sublink</a>
+                      </li>
+                      <li class="item">
+                        <a href="#">Second sublink</a>
+                      </li>
+                      <li class="item">
+                        <a href="#">Last sublink</a>
+                      </li>          
+                    </ul>
+                  </li>
+                  <li class="item">
+                    <a href="about_us.html">About Us</a>
+                  </li>
+                  <li class="item">
+                    <a href="contact_us.html">Contact Us</a>
+                  </li>
+                  <li class="item">
+                    <a href="login.html"><i class="fa-regular fa-user me-2 fs-6"></i>Login / Register</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+          </div>
+        <!-- mobile nav end here  -->   
+
+    </div>
   </header>
 
   <!---------- header sections end here  ---------->
@@ -489,15 +510,15 @@
             </div>
             <div class="col">
                <div class="about-right px-4">
-                <p>About Us</p>
-                <h3 class="mb-4">We Make Organic Food In <br> Market</h3>
-                <div>
-                    <p class="about-desc">
-                        Just a few seconds to measure your body temperature. Up to 5 users! The battery lasts up to 2 years. There are many variations of passages of Lorem Ipsum available.We started in 2019 and haven't stopped smashing it since. A global brand that doesn't sleep, we are 24/7 and always bringing something new with over 100 new products dropping on the monhtly, bringing you the latest looks for less.
-                    </p>
-                    <p><i class="fa-solid fa-truck"></i>&nbsp;&nbsp;<span class="fw-medium">Free delivery for all orders</span></p>
-                    <p><i class="fa-brands fa-cotton-bureau"></i></i>&nbsp;&nbsp;<span class="fw-medium">Original products</span></p>
-                </div>
+                  <p>About Us</p>
+                  <h3 class="mb-4">We Make Organic Food In <br> Market</h3>
+                  <div>
+                      <p class="about-desc">
+                          Just a few seconds to measure your body temperature. Up to 5 users! The battery lasts up to 2 years. There are many variations of passages of Lorem Ipsum available.We started in 2019 and haven't stopped smashing it since. A global brand that doesn't sleep, we are 24/7 and always bringing something new with over 100 new products dropping on the monhtly, bringing you the latest looks for less.
+                      </p>
+                      <p><i class="fa-solid fa-truck fs-5"></i>&nbsp;&nbsp;<span class="fw-medium">Free delivery for all orders</span></p>
+                      <p><i class="fa-brands fa-cotton-bureau fs-5"></i></i>&nbsp;&nbsp;<span class="fw-medium">Original products</span></p>
+                  </div>
                </div>
             </div>
         </div>
@@ -516,22 +537,22 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                            <div class="p-4 border-0">
-                                    <div class="testimonial-desc">
-                                        <h5 class="mb-3">Disappointing Experience</h5>
-                                        <p>I had high hopes for this product, but it fell short of my expectations. It  constantly crashes and lacks essential features. I wouldn't recommend it.
-                                        </p>
-                                    </div>
-                                    <div class="profile-box d-flex justify-content-start gap-3 align-items-center">
-                                        <div class="profile-img">
-                                            <img src="images/profile/user_3.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <h5>Bettly J. Turner</h5>
-                                            <p>CEO, Company</p>
-                                        </div>
-                                    </div>
-                            </div>
+                              <div class="p-4 border-0">
+                                      <div class="testimonial-desc">
+                                          <h5 class="mb-3">Disappointing Experience</h5>
+                                          <p>I had high hopes for this product, but it fell short of my expectations. It  constantly crashes and lacks essential features. I wouldn't recommend it.
+                                          </p>
+                                      </div>
+                                      <div class="profile-box d-flex justify-content-start gap-3 align-items-center">
+                                          <div class="profile-img">
+                                              <img src="images/profile/user_3.jpg" alt="">
+                                          </div>
+                                          <div>
+                                              <h5>Bettly J. Turner</h5>
+                                              <p>CEO, Company</p>
+                                          </div>
+                                      </div>
+                              </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="p-4 border-0">
@@ -635,9 +656,9 @@
 
     <!--------- footer start here ------------>
     <section class="footer mt-4 ">
-      <div class="container  ">
+      <div class="container-xl  ">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-4">
-          <div class="col mb-4 mb-sm-0">
+          <div class="col mb-4 mb-md-0">
             <a href="index.html" class="footer-branding text-center text-sm-start fw-semibold" style="color: var(--theme-color);">EasyShop</a>
             <p class="footer-desc">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> 
 
@@ -649,20 +670,20 @@
                 <li class=""><a href="#"><i class='bx bxl-youtube' ></i></a></li>
               </div>          
             </div>
-
           </div>
 
-          <div class="col mb-4 mb-sm-0">
+          <div class="col mb-4 mb-md-0">
             <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Categories Links</h5>
             <div class="footer-links d-flex flex-column text-start fw-medium">
             <p><a href="index.html"><i class="fa-solid fa-arrow-right me-2"></i>Home</a> </p>
             <p><a href="about_us.html"><i class="fa-solid fa-arrow-right me-2"></i>About US</a> </p>
-            <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Blog</a> </p>
             <p><a href="contact_us.html"><i class="fa-solid fa-arrow-right me-2"></i>Contact US</a></p>
-            <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Login</a> </p>
+            <p><a href="login.html"><i class="fa-solid fa-arrow-right me-2"></i>Login</a> </p>
+            <p><a href="register.html"><i class="fa-solid fa-arrow-right me-2"></i>Register</a> </p>
             </div>
           </div>
-          <div class="col mb-4 mb-sm-0">
+
+          <div class="col mb-4 mb-md-0">
             <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Usefull Links</h5>
             <div class="footer-links d-flex flex-column text-start fw-medium">
             <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Wishlist</a> </p>
@@ -672,7 +693,8 @@
             <p><a href="checkout.html"><i class="fa-solid fa-arrow-right me-2"></i>Checkout</a></p>
             </div>
           </div>
-          <div class="col mb-3 mb-sm-0">
+
+          <div class="col mb-3 mb-md-0">
             <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Have a Questions?</h5>
             <ul class="list-group footer-contact">
               <li class=" d-flex align-items-baseline mb-3">
@@ -681,15 +703,15 @@
                 <span class="footer-cont-desc" style="font-size:14px">203/ka, Green Road, Firmgate, Dhaka, Bangladesh</span>
                 
               </li>
-              <li class=" d-flex mb-3">
+              <li class=" d-flex align-items-center mb-3">
                 
                   <span class="me-3"><i class='bx bx-phone fs-5'></i></span>
                   <span class="footer-cont-desc" style="font-size:14px">+2 392 3929 210</span>
               
               </li>
-              <li class="d-flex  mb-3">
-                <a href="mailto:info@yourdomain.com" target="_blank" class="text-dark "><span class="me-3"><i class='bx bx-envelope fs-5' ></i></span>
-                  <span class="footer-cont-desc" style="font-size:14px">info@yourdomain.com</span></a>
+              <li class="d-flex align-items-center  mb-3">
+                <a href="mailto:info@yourdomain.com" target="_blank" class="text-dark d-flex"><span class="me-3"><i class='bx bx-envelope fs-5' ></i></span>
+                <span class="footer-cont-desc" style="font-size:14px">info@yourdomain.com</span></a>
               </li>
             </ul>
           </div>

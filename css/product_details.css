@@ -233,18 +233,19 @@
  }
 
  .trending-desc p{
+  font-size: 13px;
   font-weight: 500;
   color: var(--text-secondary-color);
  }
  
  .trending-desc h6{
   color: var(--theme-color);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
  }
  .trending-desc h6 del{
   color: var(--theme-color);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   margin-left: 5px;
  }

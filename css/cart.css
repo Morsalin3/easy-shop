@@ -34,17 +34,16 @@
     font-weight: 500;
     transition: all 0.3s ease-out;
  }
- .cart-tbl-desc a{
-    color: var(--text-primary-color);
-    font-weight: 500;
- }
  .cart-tbl-desc a:hover{
     color: var(--theme-color);
  }
  .cart-tbl-desc p{
     color: var(--text-primary-color);
-    font-size: 14px;
+    font-size: 13px;
     margin: 0;
+ }
+ .price{
+   font-size: 13px;
  }
 
  /* cart table section end here  */

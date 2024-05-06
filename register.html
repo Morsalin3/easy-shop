@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyShop</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body>
+  
+  <!-------- header sections start here  ----------->
+  
+  <!-- scroll navbar start here  -->
+
+  <header class="bg-white shadow-sm scroll-nav fixed-top">
+        <div class="container gx-4">
+            <div class="nav-top">
+                <nav class="navbars-top row">
+                    <div class="col-3 d-flex justify-content-start gap-3 align-items-center">
+                      <span class="nav-burger d-block d-lg-none"><i class="fa-solid fa-bars"></i></span>
+                      <a href="index.html" class="nav-branding d-none d-md-block" style="color: var(--theme-color);">EasyShop</a>
+                    
+                    </div>
+                      
+                    <div class="col-6 p-0 search-sec d-flex justify-content-center justify-content-md-between align-items-center rounded-1">
+                      <div class="select-cont d-none d-md-block">
+                        <select class="select-box px-2 px-lg-4 py-2" name="categories" id="" style="background-color: #f3f4f7;">
+                          <option value="">All Categories</option>
+                          <option value="0">Sunglasses</option>
+                          <option value="1">Bags & Purses</option>
+                          <option value="2">Silk Accessories</option>
+                          <option value="3">Cosmetics</option>
+                          <option value="4">Handy Cream</option>
+                          <option value="5">Plastics Gift</option>
+                          <option value="6">Gift Sets</option>
+                        </select>
+                      </div>
+                      <input class="border-0 py-2 px-4 w-100 d-none d-md-block" type="text" name="name" for="button-addon2" placeholder="I' am searching for" ria-label="I' am searching for" aria-describedby="button-addon2"style="background-color: #f3f4f7;">
+                      <button class="btn text-white rounded-0 rounded-end-1 py-2 d-none d-md-block" id="button-addon2" type="submit"style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
+                      <a href="index.html" class="nav-branding d-block d-md-none" style="color: var(--theme-color);">EasyShop</a>
+                    </div>
+
+                    <div class="col-3 nav-top-right">
+                      <ul class="d-flex justify-content-end align-content-center list-unstyled mb-0">
+                        <li class="d-none d-md-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><a href="#"><i class="fa-solid fa-cart-plus fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                        <div class="divider d-none d-md-block">|</div>
+                        <li class="d-none d-md-block"><a href="#"><i class="fa-regular fa-heart fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                        <div class="divide d-none d-md-block">|</div>
+                        <li class="me-1 user-icon position-relative d-none d-md-block"><a href="#"><i class="fa-regular fa-user fs-5"></i></a>
+                          <ul class="user-submenu p-2 rounded">
+                            <li><a href="login.html">Login</a></li>
+                            <hr class="m-0">
+                            <li><a href="register.html">Register</a></li>
+                          </ul>
+                        </li>
+                        <button class="btn btn-sm text-white d-block d-md-none" id="search-field" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
+                      </ul>
+                      </div>              
+                </nav>
+            </div> 
+
+        </div>
+  </header>
+  <!-- scroll navbar end here  -->
+
+  <header class="">
+    <div class="container gx-4">
+        <div class="nav-top">
+            <nav class="navbars-top row">
+                <div class="col-3 d-flex justify-content-start gap-3 align-items-center">
+                  <span class="nav-burger d-block d-lg-none"><i class="fa-solid fa-bars"></i></span>
+                  <a href="index.html" class="nav-branding d-none d-md-block" style="color: var(--theme-color);">EasyShop</a>
+                
+                </div>
+                  
+                <div class="col-6 p-0 search-sec d-flex justify-content-center justify-content-md-between align-items-center rounded-1">
+                  <div class="select-cont d-none d-md-block">
+                    <select class="select-box px-2 px-lg-4 py-2" name="categories" id="" style="background-color: #f3f4f7;">
+                      <option value="">All Categories</option>
+                      <option value="0">Sunglasses</option>
+                      <option value="1">Bags & Purses</option>
+                      <option value="2">Silk Accessories</option>
+                      <option value="3">Cosmetics</option>
+                      <option value="4">Handy Cream</option>
+                      <option value="5">Plastics Gift</option>
+                      <option value="6">Gift Sets</option>
+                    </select>
+                  </div>
+                  <input class="border-0 py-2 px-4 w-100 d-none d-md-block" type="text" name="name" for="button-addon2" placeholder="I' am searching for" ria-label="I' am searching for" aria-describedby="button-addon2"style="background-color: #f3f4f7;">
+                  <button class="btn text-white rounded-0 rounded-end-1 py-2 d-none d-md-block" id="button-addon2" type="submit"style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  <a href="index.html" class="nav-branding d-block d-md-none" style="color: var(--theme-color);">EasyShop</a>
+                </div>
+
+                <div class="col-3 nav-top-right">
+                  <ul class="d-flex justify-content-end align-content-center list-unstyled mb-0">
+                    <li class="d-none d-md-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><a href="#"><i class="fa-solid fa-cart-plus fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                    <div class="divider d-none d-md-block">|</div>
+                    <li class="d-none d-md-block"><a href="#"><i class="fa-regular fa-heart fs-5 position-relative"> <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle " style="font-size: 10px;color: #fff;">0</span></i></a></li>
+                    <div class="divide d-none d-md-block">|</div>
+                    <li class="me-1 user-icon position-relative d-none d-md-block"><a href="#"><i class="fa-regular fa-user fs-5"></i></a>
+                      <ul class="user-submenu p-2 rounded">
+                        <li><a href="login.html">Login</a></li>
+                        <hr class="m-0">
+                        <li><a href="register.html">Register</a></li>
+                      </ul>
+                    </li>
+                    <button class="btn btn-sm text-white d-block d-md-none" id="search-field" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </ul>
+                  </div>              
+            </nav>
+        </div>
+
+        <div class="nav-bottom d-none d-lg-block"  > 
+            <nav class="navbars-bottom" >                  
+              <div class="categories position-relative d-flex flex-column justify-content-center align-items-start">
+        
+                <button class="cate-btn btn fw-normal" style="background-color: var(--theme-color);color: #fff;"><i class="fa-solid fa-bars me-2"></i>Categories</button>
+                
+                <div class="cate-box">
+                  <ul class="categories-menu p-2">
+                    <li class="cate-item"><a href="#">Products</a></li>
+                    <li class="cate-item"><a href="#">Cosmetics</a>
+                    <li>
+                      <label for="btn-1" class="categories-submenu">Features
+                        <span class="fas fa-caret-down"></span>
+                      </label>
+                      <input type="checkbox" id="btn-1">
+                      <ul>
+                          <li class="cate-item"><a href="#">Pages1</a></li>
+                          <li class="cate-item"><a href="#">Pages2</a></li>
+                      </ul>
+                    </li>
+                    </li>
+                    <li class="cate-item"><a href="#">Gift Shop</a></li>
+                    <li>
+                      <label for="btn-2" class="categories-submenu">Features
+                        <span class="fas fa-caret-down"></span>
+                      </label>
+                      <input type="checkbox" id="btn-2">
+                      <ul>
+                          <li class="cate-item"><a href="#">Pages</a></li>
+                          <li class="cate-item"><a href="#">Pages2</a></li>
+                      </ul>
+                    </li>
+                    <li class="cate-item"><a href="#">Plastics Gift</a></li>
+                  </ul>
+                </div>                 
+              </div>
+
+              <div class="nav-container">
+                <ul class="nav-menus mb-0 ps-0">
+                  <li class="nav-items dropdown-menus">
+                    <a href="index.html" class="nav-links">Home</a>
+                  </li>
+                  <li class="nav-items">
+                    <a href="shop.html" class="nav-links">Shop</a>
+                  </li>
+                  <li class="nav-items dropdown-menus">
+                    <a href="javascript:void(0);" class="nav-links">Pages<i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="submenu">
+                      <li  class="nav-items"><a href="cart.html" class="nav-links">Cart</a></li>
+                      <li  class="nav-items"><a href="wishlist.html" class="nav-links">Wishlist</a></li>
+                      <li  class="nav-items"><a href="product_details.html" class="nav-links">Product Details</a></li>
+                      <li  class="nav-items"><a href="checkout.html" class="nav-links">Checkout</a></li>
+                    </ul>
+                 
+                  </li>
+                  <li class="nav-items">
+                    <a href="about_us.html" class="nav-links">About Us</a>
+                  </li>
+                  <li class="nav-items">
+                    <a href="contact_us.html" class="nav-links">Contact Us</a>
+                  </li>                    
+                </ul>
+              </div>
+          
+  
+              <div class="d-flex d-none d-lg-block">
+                <div class="">
+                  <button class="btn border-0 d-flex justify-content-center align-items-center" style="font-size: 15px;"><i class="bx bx-phone fs-5 me-1" style="color: var(--theme-color);"></i><span style="font-weight: 500;">908. 408. 501. 89</span></button>
+                </div>
+              </div>
+            </nav>
+        </div>
+
+        <!-- mobile nav start here  -->
+          <div class="mob-nav-container d-block d-lg-none">
+            <div class="remove">
+              <!-- <p class="m-0 py-1 fs-5">Menu</p> -->
+              <p class="m-0 py-1 fs-5">x</p>
+            </div>
+
+            <nav class="sidebar">
+              <div class="d-flex">
+                <a href="index.html" class="logo text-center m-auto">EasyShop</a>
+              </div>
+              <div class="menu-content">
+                <ul class="menu-items p-0">
+                  <!-- <div class="menu-title">Your menu title</div> -->
+                  <li class="item">
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li class="item">
+                    <a href="shop.html">Shop</a>
+                  </li>
+                  <li class="">
+                    <div class="submenu-item">
+                      <span>Pages</span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <ul class="menu-items submenu-box">
+                      <div class="menu-title">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Back
+                      </div>
+                      <li class="item">
+                        <a href="cart.html">Cart</a>
+                      </li>
+                      <li class="item">
+                        <a href="product_details.html">Product Details</a>
+                      </li>
+                      <li class="item">
+                        <a href="checkout.html">Checkout</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="">
+                    <div class="submenu-item">
+                      <span>Shop</span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <ul class="menu-items submenu-box">
+                      <div class="menu-title">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Back
+                      </div>
+                      <li class="item">
+                        <a href="#">Second sublink</a>
+                      </li>
+                      <li class="item">
+                        <a href="#">Second sublink</a>
+                      </li>
+                      <li class="item">
+                        <a href="#">Second sublink</a>
+                      </li>
+                      <li class="item">
+                        <a href="#">Second sublink</a>
+                      </li>
+                      <li class="item">
+                        <a href="#">Second sublink</a>
+                      </li>
+                      <li class="item">
+                        <a href="#">Last sublink</a>
+                      </li>          
+                    </ul>
+                  </li>
+                  <li class="item">
+                    <a href="about_us.html">About Us</a>
+                  </li>
+                  <li class="item">
+                    <a href="contact_us.html">Contact Us</a>
+                  </li>
+                  <li class="item">
+                    <a href="login.html"><i class="fa-regular fa-user me-2 fs-6"></i>Login / Register</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+          </div>
+        <!-- mobile nav end here  -->   
+
+    </div>
+  </header>
+
+  <!---------- header sections end here  ---------->
+
+      <!--search modal start here  -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Search Products</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Search</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+              </form>
+              
+                <div class="container ">
+                  <a  href="#" class="card mb-3" style="max-width: 100%; ">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="search-card-image">
+                          <img src="/images/product/product-3.jpg" class="" alt="">
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="search-dec p-3 p-lg-0 py-lg-3 pe-lg-3">
+                          <h5>This is a wider card with </h5>
+                          <p class="mb-0">This is a wider card with supporting text 
+                            below as a natural content...
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>                  
+                  <a  href="#" class="card mb-3" style="max-width: 100%; ">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="search-card-image">
+                          <img src="/images/product/banner-3.jpg" class="" alt="">
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="search-dec p-3 p-lg-0 py-lg-3 pe-lg-3">
+                          <h5>This is a wider card with </h5>
+                          <p class="mb-0">This is a wider card with supporting text 
+                            below as a natural content...
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>                                
+                </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--search modal end here  -->
+
+
+         <!-- offcanvas start here  -->
+          <div class="offcanvas offcanvas-end d-none d-md-block" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header bg-danger-subtle">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body p-0" >
+              <div class="d-none w-100 h-100 d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                  <span class="bg-danger-subtle rounded-circle d-flex" style="width: 50px;height: 50px;"><i class="fa-solid fa-arrow-right m-auto"></i></span>
+                  <p>Your cart is currently empty.</p>
+                 </div>
+              </div>
+              <!-- card sec start here  -->
+              <div class="offcan-card-sec overflow-y-auto overflow-x-hidden my-3 px-2 py-2">
+                <div class="row row-cols-1">
+                  <div class="col">
+                    <div class="row">
+                      <a href="#" class="col-4">
+                        <div class="" style="width: 100%;height: 100%;">
+                          <img class="w-100 h-100 rounded" src="https://ninico.botble.com/storage/sliders/banner-2.jpg" alt="product_img">
+                        </div>
+                      </a>
+                    
+                      <div class="col-8 offc-card-right position-relative">
+                        <h5 class="fs-6">Nutrient-Rich Eggplant</h5>
+                        <h6 class="">$20.35</h6>
+                        <div class="input-box rounded d-flex justify-content-between align-items-center border">
+                          <button class="offc-plus-btn  border-0 fw-bold">+</button>
+                          <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
+                          <button class="offc-minus-btn border-0 fw-bold">-</button>
+                        </div>
+                        <span class="position-absolute "><svg stroke="currentColor" fill="var(--theme-color)" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg></span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-3">
+                  <div class="col">
+                    <div class="row">
+                      <a href="#" class="col-4">
+                        <div class="" style="width: 100%;height: 100%;">
+                          <img class="w-100 h-100 rounded" src="images/product/product-5.jpg" alt="product_img">
+                        </div>
+                      </a>
+                    
+                      <div class="col-8 offc-card-right position-relative">
+                        <h5 class="fs-6">Nutrient-Rich Eggplant</h5>
+                        <h6 class="">$20.35</h6>
+                        <div class="input-box rounded d-flex justify-content-between align-items-center border">
+                          <button class="offc-plus-btn  border-0 fw-bold">+</button>
+                          <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
+                          <button class="offc-minus-btn border-0 fw-bold">-</button>
+                        </div>
+                        <span class="position-absolute "><svg stroke="currentColor" fill="var(--theme-color)" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg></span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-3">
+                  <div class="col">
+                    <div class="row">
+                      <a href="#" class="col-4">
+                        <div class="" style="width: 100%;height: 100%;">
+                          <img class="w-100 h-100 rounded" src="https://ninico.botble.com/storage/sliders/banner-2.jpg" alt="product_img">
+                        </div>
+                      </a>
+                    
+                      <div class="col-8 offc-card-right position-relative">
+                        <h5 class="fs-6">Nutrient-Rich Eggplant</h5>
+                        <h6 class="">$20.35</h6>
+                        <div class="input-box rounded d-flex justify-content-between align-items-center border">
+                          <button class="offc-plus-btn  border-0 fw-bold">+</button>
+                          <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
+                          <button class="offc-minus-btn border-0 fw-bold">-</button>
+                        </div>
+                        <span class="position-absolute "><svg stroke="currentColor" fill="var(--theme-color)" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg></span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-3">
+                  <div class="col">
+                    <div class="row">
+                      <a href="#" class="col-4">
+                        <div class="" style="width: 100%;height: 100%;">
+                          <img class="w-100 h-100 rounded" src="images/product/product-3.jpg" alt="product_img">
+                        </div>
+                      </a>
+                    
+                      <div class="col-8 offc-card-right position-relative">
+                        <h5 class="fs-6">Nutrient-Rich Eggplant</h5>
+                        <h6 class="">$20.35</h6>
+                        <div class="input-box rounded d-flex justify-content-between align-items-center border">
+                          <button class="offc-plus-btn  border-0 fw-bold">+</button>
+                          <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
+                          <button class="offc-minus-btn border-0 fw-bold">-</button>
+                        </div>
+                        <span class="position-absolute "><svg stroke="currentColor" fill="var(--theme-color)" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg></span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-3">
+                  <div class="col">
+                    <div class="row">
+                      <a href="#" class="col-4">
+                        <div class="" style="width: 100%;height: 100%;">
+                          <img class="w-100 h-100 rounded" src="https://ninico.botble.com/storage/sliders/banner-2.jpg" alt="product_img">
+                        </div>
+                      </a>
+                    
+                      <div class="col-8 offc-card-right position-relative">
+                        <h5 class="fs-6">Nutrient-Rich Eggplant</h5>
+                        <h6 class="">$20.35</h6>
+                        <div class="input-box rounded d-flex justify-content-between align-items-center border">
+                          <button class="offc-plus-btn  border-0 fw-bold">+</button>
+                          <input class=" border-0 text-center m-0" readonly type="text" value="0" name="quantity"></input>
+                          <button class="offc-minus-btn border-0 fw-bold">-</button>
+                        </div>
+                        <span class="position-absolute "><svg stroke="currentColor" fill="var(--theme-color)" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg></span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-3">
+                </div>
+              </div>
+              <!-- card sec start end  tomorrow start here -->              
+            </div>
+
+             <!-- offcanvas footer start here  -->
+             <div class="cart-footer p-3 position-absolute w-100 end-0 bottom-0">
+                <h6 class="d-flex justify-content-between">Sub Total: <span> $205.55</span></h6>
+                <h6 class="d-flex justify-content-between">Tax: <span> $205.55</span></h6>
+                <h5 class="d-flex justify-content-between">Total: <span> $205.55</span></h5>
+               <div class="mt-3">
+                <a href="#" class="btn view-btn w-100 py-2 mb-2 rounded-pill">View Cart</a>
+                <a hre="#" class="btn w-100 py-2 border-0 rounded-pill" style="background: var(--theme-color);font-weight: 500; color:#fff;">Checkout</a>
+               </div>
+            </div>
+            <!-- offcanvas footer end here  -->
+          </div>
+       <!-- offcanvas end here  -->
+
+
+    <!---- login page banner start here  ---->
+    <section class="cart-banner mb-4">
+    <div class="container gx-4">
+    <a href="index.html">Home</a>>&nbsp;<span class="text-muted">Login</span></a>
+    </div>
+    </section>
+    <!----- cart page banner end here  ----->
+
+
+    <!------ login main section start here  ------>
+
+    <section class="container gx-4 py-4">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="images/banner/Login.png" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <form class="login-auth">
+                    <div class="row row-cols-1 rounded py-5 px-5" style="background-color: #f4f4f4">
+                        <div class="col-12 mb-4" >
+                          <div class="d-flex align-items-start gap-3 ">
+                            <div class="p-3 bg-white rounded">
+                              <i class='bx bx-user-plus fs-3' style="color: var(--theme-color);"></i>
+                            </div>
+                            <div>
+                              <h5 class="text-black fw-bold">Register an account</h5>
+                              <p class="m-0" style="font-size: 13px;">Your personal data will be used to support your experience throughout this website, to manage access to your account.</p>
+                             </div>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-4" >
+                          <label for="forName" class="form-label text-black text-medium">Full Name</label>
+                          <div class="input-group">
+                              <span class="input-group-text" id="basic-addon1"><i class='bx bx-user fs-5'></i></span>
+                              <input type="text" class="form-control form-control-lg text-muted" id="forName" placeholder="Your full name" required aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+                      </div>
+                        <div class="col-12 mb-4" >
+                            <label for="forEmail" class="form-label text-black text-medium">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i class='bx bx-envelope fs-5'></i></span>
+                                <input type="email" class="form-control form-control-lg text-muted" id="forEmail" placeholder="Your Email" required aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-12 mb-4" >
+                            <label for="forMobile" class="form-label text-black text-medium">Phone (optional)</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i class='bx bx-phone fs-5'></i></span>
+                                <input type="text" class="form-control form-control-lg text-muted" id="forMobile" placeholder="Phone number" required aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="forPassword" class="form-label text-black text-medium">Password</label>
+                            <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1"><i class="bx bx-lock-alt fs-5"></i></span>
+                            <input type="text" class="form-control form-control-lg" id="forPassword" placeholder="Password" required aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="forConfirmPassword" class="form-label text-black text-medium">Password confirmation</label>
+                            <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1"><i class="bx bx-lock-alt fs-5"></i></span>
+                            <input type="text" class="form-control form-control-lg" id="forConfirmPassword" placeholder="Password confirmation" required aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                              I agree to the Terms and Privacy Policy
+                            </label>
+                            </div>
+                        </div>  
+                        <div class="col mb-4">
+                            <button class="btn text-white fw-medium w-100 py-3 mb-3 d-flex justify-content-center align-items-center" type="submit" style="background-color: var(--theme-color);font-size: 13px;">Register<i class="fa-solid fa-arrow-right-long ms-1"></i></button>
+                            <p class="text-center mb-4" style="font-size: 13px;">Already have an account? <a href="login.html" class="text-dark text-decoration-underline">Login</a></p>
+                            <hr class="m-0">   
+                        </div>
+                        <div class="col">
+                          <div class="position-relative py-3">
+                            <div class="login-social-title">
+                              <p class="">Login with social networks</p>    
+                            </div> 
+                          </div>  
+                          <div class="login-social pt-4 d-flex justify-content-center align-items-center">
+                            <a href="#" class="position-relative d-block">
+                              <img src="images/svg-icon/google.svg" alt="">
+                            </a>
+                          </div>
+                        </div>   
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!------ login main section end here  ------>
+
+    <!--------- footer start here ------------>
+    <section class="footer mt-4 ">
+      <div class="container-xl  ">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-4">
+          <div class="col mb-4 mb-md-0">
+            <a href="index.html" class="footer-branding text-center text-sm-start fw-semibold" style="color: var(--theme-color);">EasyShop</a>
+            <p class="footer-desc">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> 
+
+            <div>
+              <div class="footer-social">
+                <li class=""><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+                <li class=""><a href="#"><i class='bx bxl-whatsapp' ></i></a></li>
+                <li class=""><a href="#"><i class='bx bxl-linkedin' ></i></a></li>
+                <li class=""><a href="#"><i class='bx bxl-youtube' ></i></a></li>
+              </div>          
+            </div>
+          </div>
+
+          <div class="col mb-4 mb-md-0">
+            <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Categories Links</h5>
+            <div class="footer-links d-flex flex-column text-start fw-medium">
+            <p><a href="index.html"><i class="fa-solid fa-arrow-right me-2"></i>Home</a> </p>
+            <p><a href="about_us.html"><i class="fa-solid fa-arrow-right me-2"></i>About US</a> </p>
+            <p><a href="contact_us.html"><i class="fa-solid fa-arrow-right me-2"></i>Contact US</a></p>
+            <p><a href="login.html"><i class="fa-solid fa-arrow-right me-2"></i>Login</a> </p>
+            <p><a href="register.html"><i class="fa-solid fa-arrow-right me-2"></i>Register</a> </p>
+            </div>
+          </div>
+
+          <div class="col mb-4 mb-md-0">
+            <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Usefull Links</h5>
+            <div class="footer-links d-flex flex-column text-start fw-medium">
+            <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Wishlist</a> </p>
+            <p><a href="cart.html"><i class="fa-solid fa-arrow-right me-2"></i>Cart</a> </p>
+            <p><a href="shop.html"><i class="fa-solid fa-arrow-right me-2"></i>Shop</a> </p>
+            <p><a href="product_details.html"><i class="fa-solid fa-arrow-right me-2"></i>Product Details</a> </p>
+            <p><a href="checkout.html"><i class="fa-solid fa-arrow-right me-2"></i>Checkout</a></p>
+            </div>
+          </div>
+
+          <div class="col mb-3 mb-md-0">
+            <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Have a Questions?</h5>
+            <ul class="list-group footer-contact">
+              <li class=" d-flex align-items-baseline mb-3">
+                
+                <span class="me-3"><i class='bx bx-map fs-5' ></i></span>
+                <span class="footer-cont-desc" style="font-size:14px">203/ka, Green Road, Firmgate, Dhaka, Bangladesh</span>
+                
+              </li>
+              <li class=" d-flex align-items-center mb-3">
+                
+                  <span class="me-3"><i class='bx bx-phone fs-5'></i></span>
+                  <span class="footer-cont-desc" style="font-size:14px">+2 392 3929 210</span>
+              
+              </li>
+              <li class="d-flex align-items-center  mb-3">
+                <a href="mailto:info@yourdomain.com" target="_blank" class="text-dark d-flex"><span class="me-3"><i class='bx bx-envelope fs-5' ></i></span>
+                <span class="footer-cont-desc" style="font-size:14px">info@yourdomain.com</span></a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="text-center border border-start-0  border-end-0" style="background-color: #DFE0E3;">
+        <p class="my-auto p-3">Copyright ©2023 All Rights Reserved by EasyShop.</p>
+      </div>
+    </section>
+    <!------------ footer end here ----------->
+       
+     <!-- bottom to top scoll button  -->
+    <a href="#" class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="/js/nav.js"></script>
+
+</body>
+</html>

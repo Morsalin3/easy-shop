@@ -27,6 +27,19 @@ document.querySelectorAll(".cate-item").forEach(n => n.addEventListener("click",
   cateMenu.classList.toggle("active");
 }));
 
+let previousSpan = null;
+
+document.querySelectorAll(".categories-submenu").forEach(node => {
+  node.addEventListener("click", () => {
+    const currentSpan = node.querySelector("span");
+    
+    // Toggle "rotate" class on the clicked span
+    currentSpan.classList.toggle("rotate");
+  });
+});
+
+
+
 //  for top scroll navbar 
 window.addEventListener("scroll", ()=>{
   if (document.documentElement.scrollTop > 20) {

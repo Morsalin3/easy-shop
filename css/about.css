@@ -53,8 +53,11 @@
 }
 
 .about-right .about-desc{
-line-height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    color: var(--text-secondary-color);
 }
+
 
 /* start here for swiper slider  */
 .swiper {
@@ -70,23 +73,28 @@ line-height: 30px;
         border-radius: 15px;
     }
     .swiper-slide .testimonial-desc{
-        color: var(--text-secondary-color);
         margin-bottom: 20px;
+        & h5{
+            font-size: 18px;
+        }
     }
-    .swiper-slide .testimonial-desc p{
+    .swiper-slide .testimonial-desc p{  
         line-height: 25px;
         text-align: justify;
+        font-size: 13px;
+        color: var(--text-secondary-color);
 
     }
     .swiper-slide .profile-box h5{
         margin: 0;
         color: var(--theme-color);
-        font-weight: 600;
+        font-weight: 500;
         margin-bottom: 5px;
     }
     .swiper-slide .profile-box p{
         margin: 0;
         color: var(--text-secondary-color);
+        font-size: 13px;
     }
     .swiper-slide .profile-img{
         width: 70px;

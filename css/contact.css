@@ -29,7 +29,9 @@
   }
   .contact-desc{
     padding: 12px 10px 12px 30px ;
-    font-size: 14px;
+    & p{
+      font-size: 13px;
+    }
   }
   .get-in-touch::after{
     content: "";
@@ -37,4 +39,8 @@
     width: 80px;
     background-color: var(--theme-color);
     display: block;
+  }
+
+  .contact-main label, ::placeholder {
+    font-size: 13px;
   }

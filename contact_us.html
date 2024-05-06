@@ -67,7 +67,7 @@
   </header>
   <!-- scroll navbar end here  -->
 
-  <header class="">
+    <header class="">
       <div class="container gx-4">
           <div class="nav-top">
               <nav class="navbars-top row">
@@ -103,9 +103,9 @@
                       <div class="divide d-none d-md-block">|</div>
                       <li class="me-1 user-icon position-relative d-none d-md-block"><a href="#"><i class="fa-regular fa-user fs-5"></i></a>
                         <ul class="user-submenu p-2 rounded">
-                          <li><a href="#">Login</a></li>
+                          <li><a href="login.html">Login</a></li>
                           <hr class="m-0">
-                          <li><a href="#">Register</a></li>
+                          <li><a href="register.html">Register</a></li>
                         </ul>
                       </li>
                       <button class="btn btn-sm text-white d-block d-md-none" id="search-field" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="background-color: var(--theme-color);"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -116,18 +116,39 @@
 
           <div class="nav-bottom d-none d-lg-block"  > 
               <nav class="navbars-bottom" >                  
-                <div class="categories d-flex flex-column justify-content-center align-items-start">
+                <div class="categories position-relative d-flex flex-column justify-content-center align-items-start">
           
                   <button class="cate-btn btn fw-normal" style="background-color: var(--theme-color);color: #fff;"><i class="fa-solid fa-bars me-2"></i>Categories</button>
                   
                   <div class="cate-box">
                     <ul class="categories-menu p-2">
                       <li class="cate-item"><a href="#">Products</a></li>
-                      <li class="cate-item"><a href="#">Cosmetics</a></li>
+                      <li class="cate-item"><a href="#">Cosmetics</a>
+                      <li>
+                        <label for="btn-1" class="categories-submenu">Features
+                          <span class="fas fa-caret-down"></span>
+                        </label>
+                        <input type="checkbox" id="btn-1">
+                        <ul>
+                            <li class="cate-item"><a href="#">Pages1</a></li>
+                            <li class="cate-item"><a href="#">Pages2</a></li>
+                        </ul>
+                      </li>
+                      </li>
                       <li class="cate-item"><a href="#">Gift Shop</a></li>
+                      <li>
+                        <label for="btn-2" class="categories-submenu">Features
+                          <span class="fas fa-caret-down"></span>
+                        </label>
+                        <input type="checkbox" id="btn-2">
+                        <ul>
+                            <li class="cate-item"><a href="#">Pages</a></li>
+                            <li class="cate-item"><a href="#">Pages2</a></li>
+                        </ul>
+                      </li>
                       <li class="cate-item"><a href="#">Plastics Gift</a></li>
                     </ul>
-                  </div>
+                  </div>                 
                 </div>
 
                 <div class="nav-container">
@@ -136,7 +157,7 @@
                       <a href="index.html" class="nav-links">Home</a>
                     </li>
                     <li class="nav-items">
-                      <a href="#" class="nav-links">Shop</a>
+                      <a href="shop.html" class="nav-links">Shop</a>
                     </li>
                     <li class="nav-items dropdown-menus">
                       <a href="javascript:void(0);" class="nav-links">Pages<i class="fa-solid fa-angle-down"></i></a>
@@ -184,7 +205,7 @@
                       <a href="index.html">Home</a>
                     </li>
                     <li class="item">
-                      <a href="#">Shop</a>
+                      <a href="shop.html">Shop</a>
                     </li>
                     <li class="">
                       <div class="submenu-item">
@@ -244,7 +265,7 @@
                       <a href="contact_us.html">Contact Us</a>
                     </li>
                     <li class="item">
-                      <a href="#"><i class="fa-regular fa-user me-2 fs-6"></i>Login/Register</a>
+                      <a href="login.html"><i class="fa-regular fa-user me-2 fs-6"></i>Login / Register</a>
                     </li>
                   </ul>
                 </div>
@@ -254,7 +275,7 @@
           <!-- mobile nav end here  -->   
 
       </div>
-  </header>
+    </header>
 
   <!---------- header sections end here  ---------->
 
@@ -532,7 +553,7 @@
                     <div class="col-lg-6 ">
                       <h3 class="mb-3 text">Contact Us</h3>
                         <form>
-                          <div class="row row-cols-1 rounded py-4 px-4" style="background-color: #f4f4f4">
+                          <div class="row rounded contact-main py-4 px-4" style="background-color: #f4f4f4">
                             <div class="col-12 mb-4" >
                               <label for="name" class="form-label text-black text-medium">Full Name</label>
                                 <div class="input-group">
@@ -588,7 +609,7 @@
     <section class="footer mt-4 ">
       <div class="container-xl  ">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-4">
-          <div class="col mb-4 mb-sm-0">
+          <div class="col mb-4 mb-md-0">
             <a href="index.html" class="footer-branding text-center text-sm-start fw-semibold" style="color: var(--theme-color);">EasyShop</a>
             <p class="footer-desc">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> 
 
@@ -600,20 +621,20 @@
                 <li class=""><a href="#"><i class='bx bxl-youtube' ></i></a></li>
               </div>          
             </div>
-
           </div>
 
-          <div class="col mb-4 mb-sm-0">
+          <div class="col mb-4 mb-md-0">
             <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Categories Links</h5>
             <div class="footer-links d-flex flex-column text-start fw-medium">
             <p><a href="index.html"><i class="fa-solid fa-arrow-right me-2"></i>Home</a> </p>
             <p><a href="about_us.html"><i class="fa-solid fa-arrow-right me-2"></i>About US</a> </p>
-            <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Blog</a> </p>
             <p><a href="contact_us.html"><i class="fa-solid fa-arrow-right me-2"></i>Contact US</a></p>
-            <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Login</a> </p>
+            <p><a href="login.html"><i class="fa-solid fa-arrow-right me-2"></i>Login</a> </p>
+            <p><a href="register.html"><i class="fa-solid fa-arrow-right me-2"></i>Register</a> </p>
             </div>
           </div>
-          <div class="col mb-4 mb-sm-0">
+
+          <div class="col mb-4 mb-md-0">
             <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Usefull Links</h5>
             <div class="footer-links d-flex flex-column text-start fw-medium">
             <p><a href="#"><i class="fa-solid fa-arrow-right me-2"></i>Wishlist</a> </p>
@@ -623,7 +644,8 @@
             <p><a href="checkout.html"><i class="fa-solid fa-arrow-right me-2"></i>Checkout</a></p>
             </div>
           </div>
-          <div class="col mb-3 mb-sm-0">
+
+          <div class="col mb-3 mb-md-0">
             <h5 class="text-sm-start fw-semibold mb-3" style="color:var(--text-primary-color);">Have a Questions?</h5>
             <ul class="list-group footer-contact">
               <li class=" d-flex align-items-baseline mb-3">
@@ -632,15 +654,15 @@
                 <span class="footer-cont-desc" style="font-size:14px">203/ka, Green Road, Firmgate, Dhaka, Bangladesh</span>
                 
               </li>
-              <li class=" d-flex mb-3">
+              <li class=" d-flex align-items-center mb-3">
                 
                   <span class="me-3"><i class='bx bx-phone fs-5'></i></span>
                   <span class="footer-cont-desc" style="font-size:14px">+2 392 3929 210</span>
               
               </li>
-              <li class="d-flex  mb-3">
-                <a href="mailto:info@yourdomain.com" target="_blank" class="text-dark "><span class="me-3"><i class='bx bx-envelope fs-5' ></i></span>
-                  <span class="footer-cont-desc" style="font-size:14px">info@yourdomain.com</span></a>
+              <li class="d-flex align-items-center  mb-3">
+                <a href="mailto:info@yourdomain.com" target="_blank" class="text-dark d-flex"><span class="me-3"><i class='bx bx-envelope fs-5' ></i></span>
+                <span class="footer-cont-desc" style="font-size:14px">info@yourdomain.com</span></a>
               </li>
             </ul>
           </div>

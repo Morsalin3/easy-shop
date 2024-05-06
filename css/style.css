@@ -157,6 +157,7 @@
   .nav-branding{
     font-size: 1.5rem;
     font-weight: 500;
+    border: none;
   }
    .location {
     color: #0DCAF0;
@@ -204,11 +205,17 @@
     transition: all .5s ease;
     font-weight: 500;
   }
-  .cate-box ul li:hover a {
-    color: var(--theme-color);
-  }
   .cate-box ul li a{
     color: #222222;
+  }
+  .cate-box ul li:hover> a {
+    color: var(--theme-color);
+  }
+  .cate-box ul li ul li a{
+    color: #222222;
+  }
+  .cate-box ul li ul li:hover> a{
+    color: var(--theme-color);
   }
   .cate-box .categories-menu{
     list-style: none;
@@ -230,6 +237,49 @@
     opacity: 1;
     margin-top: 10px;
   }
+
+  /* =============== */
+ 
+  .cate-box label{
+    color: black;
+    /* font-size: 22px; */
+    font-weight: 500;
+    display: block;
+    cursor: pointer;
+  }
+
+  .categories-menu ul {
+    display: none;
+  }
+  .categories-menu input[type="checkbox"] {
+    display: none;
+  }
+  .categories-menu input[type="checkbox"]:checked + ul {
+    display: block;
+  }
+  /* [id^=btn]:checked + ul{
+    display: block;
+  } */
+  
+  .cate-box ul ul{
+    position: static;
+    list-style: none;
+
+  }
+  .cate-box ul li span{
+    font-size: 20px;
+    float: right;
+    /* margin-top: 10px; */
+    padding: 0 10px;
+    transition: 0.5s;
+  }
+  .cate-box ul li span.rotate{
+    transform: rotate(-180deg);
+  }
+  .cate-box input{
+    display: none;
+  }
+  /* =============== */
 
   .nav-container ul .submenu{
     position: absolute;
@@ -713,7 +763,7 @@
 }
 .footer-social{
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 .footer-social li{
@@ -885,7 +935,7 @@
     display: inline-block;
     width: 100%;
     border-radius: 12px;
-    border-left: 2px solid #000;
+    border-left: 2px solid #11101d;
     font-size: 14px;
 
   }
@@ -1027,11 +1077,7 @@
    .footer-links{
      /* margin-left: 43%; */
    }
-   .footer-social{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-   }
+   
    /* ------------footer end here --------- */
 
  }
@@ -1120,7 +1166,7 @@
   display: inline-block;
   width: 100%;
   border-radius: 12px;
-  border-left: 2px solid #000;
+  border-left: 2px solid #11101d;
   font-size: 14px;
 }
 .item i {
@@ -1299,7 +1345,7 @@
   display: inline-block;
   width: 100%;
   border-radius: 12px;
-  border-left: 2px solid #000;
+  border-left: 2px solid #11101d;
   font-size: 14px;
 }
 .item i {
